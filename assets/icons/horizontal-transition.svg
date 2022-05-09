@@ -1,0 +1,69 @@
+<svg
+						id="transitionFrom00To20"
+						version="1.1"
+						viewBox="0 0 300 50"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g
+							transform="translate(92.5 25)"
+							fill="none"
+							stroke="#000"
+							stroke-width="1px"
+						>
+							<path
+								id="lineForwardsFrom00To20"
+								d="m0 0 38.8-10 38.3 20 37.8-10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+							<path
+								id="lineBackwardsFrom00To20"
+								d="m115-3e-6 -37.8 10-38.3-20-38.8 10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+						</g>
+						<circle
+							id="guideFrom00To20"
+							cx="92.5"
+							cy="25"
+							r="2.5"
+							style="
+								fill: #fff;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 0.5;
+								stroke: #84dcc6;
+							"
+						/>
+						<animateMotion
+							id="animationForwardsFrom00To20"
+							begin="indefinite"
+							href="#guideFrom00To20"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineForwardsFrom00To20"></mpath>
+						</animateMotion>
+						<animateMotion
+							id="animationBackwardsFrom00To20"
+							begin="indefinite"
+							href="#guideFrom00To20"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineBackwardsFrom00To20"></mpath>
+						</animateMotion>
+					</svg>
