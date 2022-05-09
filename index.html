@@ -4,8 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
 		<script src="js/index.js" defer></script>
+		<script src="js/layout.js" defer></script>
 		<script src="js/page-home.js" defer></script>
 		<script src="js/page-about.js" defer></script>
 		<script src="js/page-knowledge.js" defer></script>
@@ -15,20 +21,462 @@
 		<title>Portifolio Daniel Oliveira</title>
 	</head>
 	<body>
-		<div id="main-container">
+		<div id="main-container" class="">
 			<div class="top-row row">
-				<div class="bg-guide"></div>
 				<div class="page-home page"></div>
+				<div class="bg-guide" style="--pos: 0">
+					<svg
+						id="first-page"
+						class="horizontal-transition transition forwards"
+						version="1.1"
+						viewBox="0 0 300 50"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g
+							transform="translate(92.5 25)"
+							fill="none"
+							stroke="#000"
+							stroke-width="1px"
+						>
+							<path
+								id="lineForwardsFrom00To20"
+								d="m0 0 38.8-10 38.3 20 37.8-10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+							<path
+								id="lineBackwardsFrom00To20"
+								d="m115-3e-6 -37.8 10-38.3-20-38.8 10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+						</g>
+						<circle
+							id="guideFrom00To20"
+							cx="92.5"
+							cy="25"
+							r="2.5"
+							style="
+								fill: #fff;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 0.5;
+								stroke: #84dcc6;
+							"
+						/>
+						<animateMotion
+							id="animationForwardsFrom00To20"
+							class="animation-forwards"
+							begin="indefinite"
+							href="#guideFrom00To20"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineForwardsFrom00To20"></mpath>
+						</animateMotion>
+						<animateMotion
+							id="animationBackwardsFrom00To20"
+							class="animation-backwards"
+							begin="indefinite"
+							href="#guideFrom00To20"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineBackwardsFrom00To20"></mpath>
+						</animateMotion>
+					</svg>
+				</div>
+				<div class="page-info page"></div>
+				<div class="bg-guide" style="--pos: 1">
+					<svg
+						class="horizontal-transition transition forwards"
+						version="1.1"
+						viewBox="0 0 300 50"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g
+							transform="translate(92.5 25)"
+							fill="none"
+							stroke="#000"
+							stroke-width="1px"
+						>
+							<path
+								id="lineForwardsFrom20To40"
+								d="m0 0 38.8-10 38.3 20 37.8-10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+							<path
+								id="lineBackwardsFrom20To40"
+								d="m115-3e-6 -37.8 10-38.3-20-38.8 10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+						</g>
+						<circle
+							id="guideFrom20To40"
+							cx="92.5"
+							cy="25"
+							r="2.5"
+							style="
+								fill: #fff;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 0.5;
+								stroke: #84dcc6;
+							"
+						/>
+						<animateMotion
+							id="animationForwardsFrom20To40"
+							class="animation-forwards"
+							begin="indefinite"
+							href="#guideFrom20To40"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineForwardsFrom20To40"></mpath>
+						</animateMotion>
+						<animateMotion
+							id="animationBackwardsFrom20To40"
+							class="animation-backwards"
+							begin="indefinite"
+							href="#guideFrom20To40"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineBackwardsFrom20To40"></mpath>
+						</animateMotion>
+					</svg>
+				</div>
+				<div class="page-contact page"></div>
 			</div>
 			<div class="bottom-row row">
-				<div class="bg-guide"></div>
 				<div class="page-about page"></div>
+				<div class="bg-guide" style="--pos: 0">
+					<svg
+						class="horizontal-transition transition"
+						version="1.1"
+						viewBox="0 0 300 50"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g
+							transform="translate(92.5 25)"
+							fill="none"
+							stroke="#000"
+							stroke-width="1px"
+						>
+							<path
+								id="lineForwardsFrom02To22"
+								d="m0 0 38.8-10 38.3 20 37.8-10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+							<path
+								id="lineBackwardsFrom02To22"
+								d="m115-3e-6 -37.8 10-38.3-20-38.8 10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+						</g>
+						<circle
+							id="guideFrom02To22"
+							cx="92.5"
+							cy="25"
+							r="2.5"
+							style="
+								fill: #fff;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 0.5;
+								stroke: #84dcc6;
+							"
+						/>
+						<animateMotion
+							id="animationForwardsFrom02To22"
+							class="animation-forwards"
+							begin="indefinite"
+							href="#guideFrom02To22"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineForwardsFrom02To22"></mpath>
+						</animateMotion>
+						<animateMotion
+							id="animationBackwardsFrom02To22"
+							class="animation-backwards"
+							begin="indefinite"
+							href="#guideFrom02To22"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineBackwardsFrom02To22"></mpath>
+						</animateMotion>
+					</svg>
+				</div>
+				<div class="page-knowledge page"></div>
+				<div class="bg-guide" style="--pos: 1">
+					<svg
+						id="transitionFrom22To42"
+						class="horizontal-transition transition"
+						version="1.1"
+						viewBox="0 0 300 50"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g
+							transform="translate(92.5 25)"
+							fill="none"
+							stroke="#000"
+							stroke-width="1px"
+						>
+							<path
+								id="lineForwardsFrom22To42"
+								d="m0 0 38.8-10 38.3 20 37.8-10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+							<path
+								id="lineBackwardsFrom22To42"
+								d="m115-3e-6 -37.8 10-38.3-20-38.8 10"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+						</g>
+						<circle
+							id="guideFrom22To42"
+							cx="92.5"
+							cy="25"
+							r="2.5"
+							style="
+								fill: #fff;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 0.5;
+								stroke: #84dcc6;
+							"
+						/>
+						<animateMotion
+							id="animationForwardsFrom22To42"
+							class="animation-forwards"
+							begin="indefinite"
+							href="#guideFrom22To42"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineForwardsFrom22To42"></mpath>
+						</animateMotion>
+						<animateMotion
+							id="animationBackwardsFrom22To42"
+							class="animation-backwards"
+							begin="indefinite"
+							href="#guideFrom22To42"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineBackwardsFrom22To42"></mpath>
+						</animateMotion>
+					</svg>
+				</div>
+				<div class="page-projects page"></div>
 			</div>
 			<div class="left-column column">
-				<div class="bg-guide"></div>
+				<div class="bg-guide" style="--pos: 0">
+					<svg
+						id="transitionFrom00To02"
+						class="vertical-transition transition"
+						version="1.1"
+						viewBox="0 0 50 300"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g
+							fill="none"
+							stroke="#000"
+							stroke-width="1px"
+							transform="translate(24.9 92.5)"
+						>
+							<path
+								id="lineForwardsFrom00To02"
+								d="m0 0 10.1 38.9-20 38.3 10 37.8"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+							<path
+								id="lineBackwardsFrom00To02"
+								d="m0.051 115-10-37.8 20-38.3-10.1-38.9"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+						</g>
+						<circle
+							id="guideFrom00To02"
+							cx="25"
+							cy="92.5"
+							r="2.5"
+							style="
+								fill: #fff;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 0.5;
+								stroke: #84dcc6;
+							"
+						/>
+						<animateMotion
+							id="animationForwardsFrom00To02"
+							class="animation-forwards"
+							begin="indefinite"
+							href="#guideFrom00To02"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineForwardsFrom00To02"></mpath>
+						</animateMotion>
+						<animateMotion
+							id="animationBackwardsFrom00To02"
+							class="animation-backwards"
+							begin="indefinite"
+							href="#guideFrom00To02"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineBackwardsFrom00To02"></mpath>
+						</animateMotion>
+					</svg>
+				</div>
 			</div>
 			<div class="right-column column">
-				<div class="bg-guide"></div>
+				<div class="bg-guide" style="--pos: 0">
+					<svg
+						id="transitionFrom40To42"
+						class="transition vertical-transition forwards"
+						version="1.1"
+						viewBox="0 0 50 300"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g
+							fill="none"
+							stroke="#000"
+							stroke-width="1px"
+							transform="translate(24.9 92.5)"
+						>
+							<path
+								id="lineForwardsFrom40To42"
+								d="m0 0 10.1 38.9-20 38.3 10 37.8"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+							<path
+								id="lineBackwardsFrom40To42"
+								d="m0.051 115-10-37.8 20-38.3-10.1-38.9"
+								style="
+									fill: none;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+									stroke-width: 1px;
+									stroke: #0081a7;
+								"
+							/>
+						</g>
+						<circle
+							id="guideFrom40To42"
+							cx="25"
+							cy="92.5"
+							r="2.5"
+							style="
+								fill: #fff;
+								stroke-linecap: round;
+								stroke-linejoin: round;
+								stroke-width: 0.5;
+								stroke: #84dcc6;
+							"
+						/>
+						<animateMotion
+							id="animationForwardsFrom40To42"
+							class="animation-forwards"
+							begin="indefinite"
+							href="#guideFrom40To42"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineForwardsFrom40To42"></mpath>
+						</animateMotion>
+						<animateMotion
+							id="animationBackwardsFrom40To42"
+							class="animation-backwards"
+							begin="indefinite"
+							href="#guideFrom40To42"
+							dur="1s"
+							repeatCount="1"
+							fill="freeze"
+						>
+							<mpath href="#lineBackwardsFrom40To42"></mpath>
+						</animateMotion>
+					</svg>
+				</div>
 			</div>
 		</div>
 	</body>

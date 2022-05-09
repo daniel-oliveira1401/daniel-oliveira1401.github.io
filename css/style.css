@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+#main-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 500vw;
+  height: 300vh;
+  transition: top 1s ease-in-out, left 1s ease-in-out;
+  background-color: #222222;
+}
+
+#main-container.dev {
+  left: -200vw;
+  top: -100vh;
+  transform: scale(0.15);
+}
+
+.row {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+}
+.row .bg-guide {
+  width: 300vw;
+  height: 100vh;
+  left: calc(var(--pos) * 200vw);
+}
+.row .bg-guide svg {
+  width: 100%;
+}
+
+.top-row {
+  top: 0;
+}
+
+.bottom-row {
+  bottom: 0;
+}
+
+.column {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  pointer-events: none;
+}
+.column .bg-guide {
+  flex-direction: column;
+  height: 300vh;
+  width: 100vw;
+  top: calc(var(--pos) * 200vh);
+}
+.column .bg-guide svg {
+  height: 100%;
+}
+
+.left-column {
+  left: 0;
+}
+
+.right-column {
+  right: 0;
+}
+
+.bg-guide {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+.bg-guide svg {
+  visibility: visible;
+}
+.bg-guide svg circle {
+  pointer-events: all;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+}/*# sourceMappingURL=style.css.map */
