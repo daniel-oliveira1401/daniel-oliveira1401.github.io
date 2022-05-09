@@ -1,0 +1,79 @@
+.video-column  
+	padding-right: 40px 
+
+	&__title
+		color: $primary 
+		font-weight: 900 
+		font-size: 20px 
+		font-family: $font-roboto 
+		line-height: 25px 
+		letter-spacing: 0.05em 
+		font-style: normal 
+		margin-bottom: 19px 
+
+	&__video-container
+		aspect-ratio: 784 / 439  // respeitando o aspect-ratio do mockup
+		width: 100% 
+		background-color: darkseagreen 
+		border-radius: 3px 
+		position: relative 
+
+
+.video  
+	width: 100% 
+
+.video-overlay
+	position: absolute 
+	top: 0 
+	bottom: 0 
+	left: 0 
+	right: 0 
+	background: rgba(141, 53, 6, 0.5) 
+	padding-top: 35px 
+	padding-left: 32px 
+	padding-right: 17px 
+	padding-bottom: 52px 
+	display: flex 
+	flex-direction: column 
+	justify-content: space-between 
+	border-radius: 3px 
+
+	&__title
+		font-family: $font-roboto 
+		font-style: normal 
+		font-weight: 900 
+		font-size: 24px 
+		line-height: 25px 
+		letter-spacing: 0.05em 
+		color: $text-light 
+	&__caption
+		display: flex 
+		align-items: center
+
+		img
+			border-radius: 10rem 
+			border: 1px solid $primary 
+			padding: 4.57px 
+			margin-right: 19px 
+	
+	.caption
+
+		&__name
+			font-family: $font-roboto 
+			font-style: normal 
+			font-weight: 900 
+			font-size: 34px 
+			line-height: 25px 
+			letter-spacing: 0.05em 
+			color: $text-light 
+			margin-bottom: 5px 
+
+		&__description
+			font-family: $font-roboto 
+			font-style: normal 
+			font-weight: 900 
+			font-size: 20px 
+			line-height: 25px 
+			letter-spacing: 0.05em 
+			margin-bottom: 0px 
+			color: $text-light 

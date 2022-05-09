@@ -9,7 +9,6 @@ let pageDistance = 200; //200 vw or vh from one page to another
 let mode = "prod"; //can be "prod" or "dev"
 
 function toggleHorizontalAnimation(e, svg) {
-	console.log(svg);
 	if (svg.classList.toggle("forwards")) {
 		$(svg).children(".animation-forwards")[0].beginElement();
 		pos.left += -pageDistance;

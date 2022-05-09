@@ -6,3 +6,57 @@
 
 html 
 	font-size: 100%
+	overflow: hidden
+
+body
+	overflow: hidden
+	scro
+	font-family: 'Roboto', sans-serif
+	font-size: 1rem
+	color: $text-white
+	text-align: center
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 400
+
+p
+	margin-bottom: 2rem
+
+strong
+	font-weight: bold
+
+.content
+	&__header
+		font-size: $font-lg
+		margin-bottom: 3rem
+		color: $goldenRod
+		.symbols
+			color: $celadonBlue
+	
+	&__img
+		height: 18.75rem
+		width: 100%
+		background-color: $white
+		padding: 0.3125rem
+		color: $eerieBlack
+		overflow: hidden
+		// border-radius: 0.1875rem
+		display: flex
+		flex-direction: column
+		margin-bottom: 1.5rem
+		img
+			flex-grow: 1
+			border: none
+			border-color: $white
+
+		h4, h5
+			font-size: $font-xs
+		
+
+	&__footer
+		font-size: $font-lg
+		margin-bottom: 3rem
+		margin-top: 3rem
+		color: $goldenRod
+		.symbols
+			color: $celadonBlue

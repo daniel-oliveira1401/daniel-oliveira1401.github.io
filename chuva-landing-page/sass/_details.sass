@@ -1,0 +1,111 @@
+.details-column  
+	display: flex 
+	flex-direction: column 
+
+	&__buttons
+		display: flex 
+		justify-content: flex-end 
+ 
+		.btn
+			background-color: $primary 
+			color: $text-light 
+			display: flex 
+			align-items: center 
+			font-size: 16px 
+			line-height: 19px 
+			font-family: $font-roboto 
+			font-style: normal 
+			font-weight: 500 
+			border-radius: 4px 
+			margin-left: 5px 
+
+		.btn-download span
+			margin-left: 5px 
+
+	> h3
+		font-size: 14px 
+		font-weight: 500 
+		line-height: 25px 
+		text-align: right 
+		font-style: normal 
+		font-family: $font-roboto 
+		color: $primary 
+
+	&__panel
+		border-radius: 3px 
+		overflow: hidden 
+		border: 1px solid #ececec 
+		position: relative 
+		flex-grow: 1 
+		display: flex 
+		flex-direction: column 
+
+		> h2
+			background-color: $secondary 
+			padding-left: 15px 
+			padding-right: 15px 
+			padding-top: 11px 
+			padding-bottom: 9px 
+			font-size: 20px 
+			line-height: 25px 
+			font-weight: 500 
+			font-style: normal 
+			font-family: $font-roboto 
+			color: #4e4e4e 
+			border: 1px solid #ececec 
+			margin-bottom: 0
+
+	&__details
+		overflow: auto 
+		position: relative 
+		flex-grow: 1
+
+		.position-absolute
+			padding: 15px
+	
+	.detail
+		margin-bottom: 0 
+
+		[class$="label"]
+			font-family: $font-quicksand 
+			font-style: normal 
+			font-weight: 400 
+			font-size: 12px 
+			line-height: 14px 
+			color: $text 
+
+		[class$="value"] 
+			font-family: $font-quicksand 
+			font-style: normal 
+			font-weight: 700 
+			font-size: 12px 
+			line-height: 14px 
+			color: $text 
+	
+	:is(.authors__label, .author)  
+		font-family: $font-quicksand 
+		font-style: normal 
+		font-size: 14px 
+		line-height: 17px 
+		margin-bottom: 0 
+		color: $text 
+
+	.authors__label
+		margin-top: 14px 
+		font-weight: 700 
+
+	.author
+		font-weight: 400 
+
+	footer
+		margin-top: 28px 
+
+	.footnote
+		font-size: 12px 
+		line-height: 12px 
+		font-weight: 400 
+		font-family: $font-quicksand 
+		letter-spacing: 0.02em 
+		color: #ada0a0 
+		margin-bottom: 0 
+ 

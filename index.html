@@ -10,6 +10,12 @@
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 		<script src="js/index.js" defer></script>
 		<script src="js/layout.js" defer></script>
 		<script src="js/page-home.js" defer></script>
@@ -23,7 +29,22 @@
 	<body>
 		<div id="main-container" class="">
 			<div class="top-row row">
-				<div class="page-home page"></div>
+				<div class="page-home page">
+					<div class="content">
+						<div class="page-home__title">Daniel Oliveira</div>
+						<div class="page-home__subtitle">
+							Desenvolvedor Frontend apaixonado por aprender!
+						</div>
+						<div class="page-home__cv">
+							<h2>Meu currículo</h2>
+							<img class="cv" src="/assets/documents/cv-img.JPG" alt="" />
+						</div>
+						<div class="page-home__hint">
+							Clique nos Guias <span class="guide-icon"></span> para navegar
+							pelo site, mas cuidado para não se perder ;)
+						</div>
+					</div>
+				</div>
 				<div class="bg-guide" style="--pos: 0">
 					<svg
 						id="first-page"
@@ -98,7 +119,21 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-info page"></div>
+				<div class="page-info page">
+					<div class="content">
+						<div class="content__header">
+							<span class="symbols">&lt;</span>info<span class="symbols"
+								>&gt;</span
+							>
+						</div>
+						<p>Este portifolio está hospedado no Github Pages.</p>
+						<div class="content__footer">
+							<span class="symbols">&lt;/</span>info<span class="symbols"
+								>&gt;</span
+							>
+						</div>
+					</div>
+				</div>
 				<div class="bg-guide" style="--pos: 1">
 					<svg
 						class="horizontal-transition transition forwards"
@@ -172,10 +207,87 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-contact page"></div>
+				<div class="page-contact page">
+					<div class="content">
+						<div class="content__header">
+							<span class="symbols">&lt;</span>contato<span class="symbols"
+								>&gt;</span
+							>
+						</div>
+						<p>Quer entrar em contato comigo?</p>
+						<p>Me mande um e-mail ;)</p>
+						<p>daniel.oliveira1401@outlook.com</p>
+						<p>ou me envie uma mensagem no LinkedIn</p>
+						<p>https://www.linkedin.com/in/daniel-oliveira-807654234</p>
+						<div class="content__footer">
+							<span class="symbols">&lt;/</span>contato<span class="symbols"
+								>&gt;</span
+							>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="bottom-row row">
-				<div class="page-about page"></div>
+				<div class="page-about page">
+					<div class="content">
+						<div class="content__header">
+							<span class="symbols">&lt;</span>sobre<span class="symbols"
+								>&gt;</span
+							>
+						</div>
+						<div class="page-about__greetings">Oi,</div>
+						<p>meu nome é Daniel, tenho 19 anos e moro no Brasil 🙂</p>
+						<p>
+							Coloquei meu pé no mundo da tecnologia pela primeira vez no curso
+							de Técnico em Eletrônica que comecei na ETEC em 2019.
+						</p>
+						<div class="content__img">
+							<h4>Imagem 1</h4>
+							<img src="" alt="" />
+							<h5>Alguma descricao de placeholder. Tirar isso aqui depois.</h5>
+						</div>
+						<p>
+							No segundo semestre do curso, decidi que queria me aprofundar mais
+							em robótica, e por isso, entrei no curso de Técnico em Mecatrônica
+							no SENAI.
+						</p>
+						<div class="content__img">
+							<h4>Imagem 1</h4>
+							<img src="" alt="" />
+							<h5>Alguma descricao de placeholder. Tirar isso aqui depois.</h5>
+						</div>
+						<p>
+							No terceiro semestre do curso de Técnico em Eletrônica na ETEC
+							tive meu primeiro contato com programação (programação de
+							microcontroladores).
+						</p>
+						<div class="content__img">
+							<h4>Imagem 1</h4>
+							<img src="" alt="" />
+							<h5>Alguma descricao de placeholder. Tirar isso aqui depois.</h5>
+						</div>
+						<p>
+							A partir desse momento, foi amor à primeira vista e me apaixonei
+							por programar!
+						</p>
+						<p>
+							Então, no final de 2020 acabei o curso de Técnico em Eletrônica na
+							ETEC e no final de 2021 acabei o curso de Técnico em Mecatrônica
+							no SENAI.
+						</p>
+						<p>
+							Agora estou cursando a faculdade de Análise e Desenvolvimento de
+							Sistemas na Descomplica Faculdade Digital e pretendo seguir a
+							carreira de Desenvolvedor Web para que eu possa trabalhar com o
+							que amo: programação :)
+						</p>
+						<div class="content__footer">
+							<span class="symbols">&lt;/</span>sobre<span class="symbols"
+								>&gt;</span
+							>
+						</div>
+					</div>
+				</div>
 				<div class="bg-guide" style="--pos: 0">
 					<svg
 						class="horizontal-transition transition"
@@ -249,7 +361,113 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-knowledge page"></div>
+				<div class="page-knowledge page">
+					<div class="content">
+						<div class="content__header">
+							<span class="symbols">&lt;</span>conhecimentos<span
+								class="symbols"
+								>&gt;</span
+							>
+						</div>
+						<p>
+							Comecei a programar com a linguagem <strong>C++</strong> para
+							microcontroladores no ambiente de desenvolvimento Arduino. Depois,
+							aprendi <strong>assembly</strong> para microcontroladores PIC.
+						</p>
+						<p>
+							Em seguida, iniciei minha jornada de programação de computadores e
+							aprendi <strong>Java</strong>. O meu intuito de aprender Java era
+							criar um aplicativo mobile que me permitisse controlar meu TCC de
+							Eletrônica via Bluetooth usando o ambiente de desenvolvimento
+							<strong>Android Studio</strong>. O resultado foi que eu consegui e
+							tiramos nota 100 no TCC 🎉
+						</p>
+						<div class="content__img">
+							<h4>Imagem 1</h4>
+							<img src="" alt="" />
+							<h5>Alguma descricao de placeholder. Tirar isso aqui depois.</h5>
+						</div>
+						<p>
+							Para expandir meus conhecimentos em <strong>Java</strong>, criei
+							mini projetos que me possibilitaram aprender muitas coisas
+							práticas de como utilizar essa linguagem de programação para
+							executar tarefas em um computador. Aqui estão alguns exemplos:
+						</p>
+						<div class="content__img">
+							<h4>Imagem 1</h4>
+							<img src="" alt="" />
+							<h5>Alguma descricao de placeholder. Tirar isso aqui depois.</h5>
+						</div>
+						<div class="content__img">
+							<h4>Imagem 1</h4>
+							<img src="" alt="" />
+							<h5>Alguma descricao de placeholder. Tirar isso aqui depois.</h5>
+						</div>
+						<p>
+							Depois de me aventurar em <strong>Java</strong>, comecei a
+							aprender tecnologias relacionadas à <strong>Web</strong>. Fiz um
+							curso na Coursera oferecido pela
+							<strong>John Hopkins University</strong> sobre
+							<strong>HTML</strong>, <strong>CSS</strong> e
+							<strong>JavaScript</strong>. Nesse curso foi apresentado toda a
+							fundação necessária para construir landing pages e sites simples.
+						</p>
+						<p>
+							Com essa base, decidi me aprofundar mais na área de Frontend e
+							comecei a estudar <strong>React</strong>. No começo foi bem
+							confuso para mim entender os conceitos relacionados a essa
+							biblioteca, e o que estava acontecendo por trás de toda aquela
+							mágica que me possibilitava misturar linguagens diferentes para no
+							final gerar uma aplicação.
+						</p>
+						<p>
+							Com essa dificuldade me impedindo de progredir, decidi voltar um
+							passo e entender primeiro como a Web funciona. Foi então que
+							aprendi sobre o protocolo <strong>HTTP</strong>, como acontece a
+							comunicação do Frontend com o Backend, e o que era na verdade o
+							Backend. Aprendi o básico sobre <strong> APIs RESTful</strong> com
+							<strong>Nodejs</strong> e <strong>Express</strong>.
+						</p>
+						<p>
+							Agora que essa parte de comunicação já foi compreendida, parti
+							para aprender <strong>Webpack</strong>, já que tinha descoberto
+							que ele que era o responsável por aquela magia que eu tinha
+							presenciado quando utilizando React.
+						</p>
+						<p>
+							Nesse ponto, eu já estava fazendo projetos para testar meus
+							conhecimentos e treinar o que sabia, mas ainda estava sentindo
+							falta de uma maneira de controlar as versões dos meus projetos e
+							poder experimentar mudanças sem ter que comprometer toda a
+							estrutura do projeto. Foi então que conheci o
+							<strong>Software de Controle de Versão Git</strong> e como ele
+							pode ser integrado com o <strong>Github</strong>.
+						</p>
+						<p>
+							Por fim, estudei <strong>Bootstrap</strong> e
+							<strong>SASS</strong> para melhorar minhas capacidades de criação
+							de layouts mais complexos para Web, e também estruturar de forma
+							mais organizada os projetos.
+						</p>
+						<p>
+							Atualmente estou focado em <strong>aprender</strong> os conteúdos
+							novos que a faculdade está me apresentando, e também
+							<strong>aplicar</strong> todo o conhecimento que adquiri até agora
+							sobre como desenvolvimento web funciona.
+						</p>
+						<p>
+							Acredito que se continuar estudando e praticando muito, vou
+							conseguir chegar no meu objetivo de se tornar um
+							<strong>Desenvolvedor Full Stack</strong>.
+						</p>
+						<div class="content__footer">
+							<span class="symbols">&lt;/</span>conhecimentos<span
+								class="symbols"
+								>&gt;</span
+							>
+						</div>
+					</div>
+				</div>
 				<div class="bg-guide" style="--pos: 1">
 					<svg
 						id="transitionFrom22To42"
@@ -324,7 +542,24 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-projects page"></div>
+				<div class="page-projects page">
+					<div class="content">
+						<div class="navigation-container">
+							<div class="nav-arrow arrow-prev disabled"></div>
+							<div class="nav-arrow arrow-next"></div>
+						</div>
+						<div class="projects-container">
+							<iframe
+								src="./easybank-landing-page/index.html"
+								frameborder="0"
+							></iframe>
+							<iframe
+								src="./chuva-landing-page/index.html"
+								frameborder="0"
+							></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="left-column column">
 				<div class="bg-guide" style="--pos: 0">

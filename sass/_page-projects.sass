@@ -1,0 +1,46 @@
+.page-projects
+	display: flex
+	justify-content: flex-end
+	align-items: flex-end
+	.content
+		position: relative
+		// background-color: yellow
+		width: 89%
+		height: 100%
+		
+		overflow-x: hidden
+		overflow-y: visible
+
+		.projects-container
+			display: flex
+			height: 86%
+			width: 100%
+			position: relative
+			left: 0
+			transition: left 300ms ease-in-out
+
+		.navigation-container
+			height: 14%
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			padding: 0 1rem
+			
+			.disabled
+				opacity: 0.5
+				pointer-events: none
+
+			.nav-arrow
+				background-image: url("../assets/icons/nav-arrow.svg")
+				height: 50px
+				width: 50px
+				transition: opacity 300ms ease-in-out
+				
+			.arrow-prev
+				transform: rotate(180deg)
+
+
+		iframe
+			min-height: 100%
+			min-width: 100%
+

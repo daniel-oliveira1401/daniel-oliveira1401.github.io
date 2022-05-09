@@ -3,13 +3,13 @@ body
 	
 #main-container 
 	position: relative
-	top: 0
-	left: 0
+	top: -0 //back to zero when done debugging
+	left: 0 //back to zero when done debugging
 	width: 500vw
 	height: 300vh
 	transition: top 1s ease-in-out, left 1s ease-in-out
 	// background-color: gray
-	background-color: $container-bg
+	background-color: $eerieBlack
 
 #main-container.dev
 	left: -200vw
@@ -54,7 +54,12 @@ body
 		top: calc( var(--pos) * 200vh ) // --pos must come from the html markup as the style attribute, as in style="--pos: 0;"
 
 		svg
-			height: 100%
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			height: 105%
+			@include breakpoint-up(medium)
+				height: 100%
 
 .left-column
 	left: 0
@@ -77,4 +82,13 @@ body
 .page
 	height: 100vh
 	width: 100vw
-	// background-color: yellow
+	display: grid
+	place-items: center
+	pointer-events: all
+
+	.content
+		height: 85%
+		width: 79%
+		overflow: auto
+		
+		

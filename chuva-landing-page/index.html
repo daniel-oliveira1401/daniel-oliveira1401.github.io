@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- CDN bootstrap (CSS) -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<!-- CDN bootstrap (Javascript) -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- CDN quilljs (edicao de texto) -->
+		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+		<link
+			href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+			rel="stylesheet"
+		/>
+		<!-- Fontes 'quicksand' e 'roboto' -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- jquery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="shortcut icon"
+			href="./assets/icons/favicon.ico"
+			type="image/x-icon"
+		/>
+		<meta name="description" content="Exercicio de Frontend da Chuva" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="./js/gerenciador-layout.js" defer></script>
+		<script src="./js/funcionalidades.js" defer></script>
+		<title>Exercício Frontend - Chuva</title>
+	</head>
+	<body>
+		<div id="site" class="row gx-0">
+			<!-- barra de navegacao -->
+			<div class="nav-column sticky-top col-md-2">
+				<nav class="navbar navbar-expand-md navbar-light bg-light py-0">
+					<div class="container-fluid flex-md-column align-items-md-start">
+						<div class="container-fluid d-flex">
+							<!-- Icone de toggle da navbar (aparece apenas quando em mobile) -->
+							<button
+								class="navbar-toggler"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#navigation"
+								aria-controls="navigation"
+								aria-expanded="false"
+								aria-label="Expandir/colapsar barra de navegação"
+							>
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<a
+								href="#"
+								class="navbar-brand d-flex flex-md-column w-100 py-0 me-0"
+							>
+								<h4 class="logo-text mb-0">SLACA 2019</h4>
+
+								<img
+									src="./assets/images/dewey-4-logo.png"
+									alt="Logo 13 SLACA"
+									id="logo-img"
+									class="mh-100 d-inline-block d-md-block rounded"
+								/>
+							</a>
+						</div>
+
+						<div
+							class="collapse navbar-collapse text-center text-md-start w-100"
+							id="navigation"
+						>
+							<ul class="navbar-nav flex-column w-100">
+								<li class="nav-item">
+									<a class="nav-link" href="#">Apresentação</a>
+								</li>
+								<hr class="nav-divider" />
+								<li class="nav-item">
+									<a class="nav-link" href="#">Comitês</a>
+								</li>
+								<hr class="nav-divider" />
+								<li class="nav-item">
+									<a class="nav-link" href="#">Autores</a>
+								</li>
+								<hr class="nav-divider" />
+								<li class="nav-item">
+									<a class="nav-link" href="#">Eixos temáticos</a>
+								</li>
+								<hr class="nav-divider" />
+								<li class="nav-item">
+									<a class="nav-link active" href="#">Trabalhos</a>
+								</li>
+								<hr class="nav-divider" />
+								<li class="nav-item">
+									<a class="nav-link" href="#">Contato</a>
+								</li>
+								<hr class="nav-divider" />
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- conteudo da pagina -->
+			<div class="content-column col-md-10">
+				<!-- Header da pagina -->
+				<header class="header row gx-0">
+					<div class="col-lg-8">
+						<p class="header__short-description">
+							Anais do Simpósio Latino Americano de Ciências de Alimentos
+						</p>
+						<p class="header__description">
+							Anais do 13º Simpósio Latina Americano de Ciência de Alimentos
+						</p>
+						<p class="header__issn">ISSN: 1234-5678</p>
+					</div>
+					<div class="col-lg-4 user-info">
+						<div class="btn-language-container">
+							<img
+								src="./assets/icons/img-language.png"
+								alt="Icone de idioma"
+								class="icon-language"
+							/>
+							<select class="select-language">
+								<option value="pt-br">PT, BR</option>
+								<option value="pt-br">PT, BR</option>
+								<option value="pt-br">PT, BR</option>
+							</select>
+						</div>
+						<div class="user-info__text">
+							<div class="user-info__greetings">Bem vindo!</div>
+							<div class="user-info__email">alguem12@galoascrience.com</div>
+						</div>
+						<div class="user-info__img-container position-relative">
+							<img
+								src="./assets/images/usuario-exemplo.png"
+								alt="Imagem do usuario"
+								class="user-info__img rounded-circle"
+							/>
+							<div class="user-info__img-badge rounded-circle">2</div>
+						</div>
+					</div>
+				</header>
+				<!-- Conteudo principal da pagina -->
+				<main class="container">
+					<section class="row g-0 content-presentation">
+						<div class="col-lg-9 video-column mb-2 mb-lg-0">
+							<h3 class="video-column__title">
+								Análise sensorial de preparações funcionais desenvolvidas para
+								escolares entre 09 e 15 anos, do município de Campinas/SP
+							</h3>
+							<div class="video-column__video-container">
+								<img src="./assets/images/dewey-1-video.png" class="video" />
+								<div class="video-overlay">
+									<h2 class="video-overlay__title">
+										Análise sensorial de preparações funcionais desenvolvidas
+										para escolares entre 09 e 15 anos, do município de
+										Campinas/SP
+									</h2>
+									<div class="video-overlay__caption">
+										<img
+											src="./assets/images/master.png"
+											alt="Imagem de um homem"
+										/>
+										<div class="caption">
+											<h3 class="caption__name">Beatriz Christiane Melo</h3>
+											<h4 class="caption__description">
+												FCA / Universidade Estadual de Campinas
+											</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 details-column">
+							<div class="details-column__buttons">
+								<button class="btn-download btn">
+									<img
+										src="./assets/icons/icon-download.svg"
+										alt="icone de download"
+										class="d-inline-block"
+									/><span>Download</span>
+								</button>
+								<button class="btn btn-favorite">
+									<img
+										src="./assets/icons/icon-star.svg"
+										alt="icone de favorito"
+									/>
+								</button>
+								<button class="btn btn-doi">
+									<img src="./assets/icons/icon-doi.svg" alt="icone doi" />
+								</button>
+							</div>
+							<h3>COMO CITAR ESSE TRABALHO?</h3>
+							<div class="details-column__panel">
+								<h2>Detalhes</h2>
+								<div class="details-column__details">
+									<div class="position-absolute bottom-0 top-0 start-0 end-0">
+										<p class="presentation-type detail">
+											<span class="presentation-type__label"
+												>Tipo de Apresentação:</span
+											>
+											<span class="presentation-type__value">Pôster</span>
+										</p>
+										<p class="thematic-axis detail">
+											<span class="thematic-axis__label">Eixo temático:</span>
+											<span class="thematic-axis__value"
+												>Alimentação e saúde (AS)</span
+											>
+										</p>
+										<p class="keywords detail">
+											<span class="keywords__label">Palavras-chaves</span>
+											<span class="keywords__value"
+												>Alimentos funcionais, alimentação escolar.</span
+											>
+										</p>
+										<section class="authors">
+											<h3 class="authors__label">Autores:</h3>
+											<p class="author">Galileo Galilei¹</p>
+											<p class="author">Berta Lange de Morretes²</p>
+											<p class="author">Isaac Newton³</p>
+											<p class="author">Cesar Lattes¹</p>
+											<p class="author">Stephen Hawking⁴</p>
+										</section>
+										<footer>
+											<p class="footnote">¹Universidade Estadual de Campinas</p>
+											<p class="footnote">²Universidade de São Paulo</p>
+											<p class="footnote">
+												³Instituto Nacional de Pesquisas Espaciais
+											</p>
+											<p class="footnote">
+												⁴Universidade Federal do Rio de Janeiro
+											</p>
+										</footer>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="abstract" class="abstract">
+						<h2 class="abstract__label">Resumo</h2>
+
+						<div class="abstract__content-container">
+							<div id="abstract__content" class="abstract__content">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Doloremque, magnam earum voluptatibus animi vitae pariatur aut
+								deleniti nostrum nemo vel assumenda iusto numquam officia minus
+								saepe nesciunt nobis? Vitae, facere? Sequi illum quae tempore
+								eos at, facere odio, non quos blanditiis unde magnam? Quisquam
+								minus et nihil consectetur adipisci, dicta dolores culpa?
+								Facere, repellendus aperiam nemo placeat dolores at sunt?
+								Deserunt expedita quas alias asperiores commodi vel nihil
+								inventore veritatis quia omnis. Cupiditate natus non corporis a
+								eveniet ab neque sequi laboriosam omnis quod fuga quia,
+								voluptates eius hic molestiae. Molestiae doloribus officiis id
+								dolorum. Consequuntur quidem veniam magni corporis impedit
+								laboriosam ipsam in natus. Eligendi vero cumque nihil inventore
+								facilis voluptatum! Modi facere provident nobis voluptates sunt
+								quo quam. Laboriosam voluptatibus recusandae reiciendis illo
+								omnis sapiente, corrupti dolor quibusdam ipsam rerum magnam? Id
+								nobis repudiandae similique iure, deserunt eveniet, facilis iste
+								repellendus iusto quaerat molestiae aliquid sequi quibusdam
+								alias! Labore voluptatum expedita ratione optio perferendis
+								excepturi commodi, exercitationem odio minus, iure nostrum ipsa
+								laborum dignissimos soluta totam deserunt consequatur! Vero
+								adipisci aspernatur eius. Aperiam nobis officiis porro
+								aspernatur dignissimos. Consequuntur ullam nulla, laborum
+								tempora aliquam ipsum aut fuga suscipit inventore. Molestiae
+								adipisci ipsum nemo soluta, asperiores perspiciatis excepturi
+								dolorum quod, laboriosam saepe consectetur neque totam minima
+								nostrum accusantium vero. Assumenda amet quam temporibus
+								eligendi nihil quisquam neque nam, a quia ex fugiat eum
+								inventore similique impedit! Consequuntur, minus. Quasi,
+								mollitia praesentium? Nulla deleniti quas asperiores recusandae
+								doloremque perferendis non? Impedit eius cumque eos voluptate
+								tempore, optio velit assumenda, possimus maiores obcaecati sunt
+								quisquam eligendi nostrum reprehenderit molestiae? Quibusdam
+								tenetur obcaecati voluptatem cum, consectetur aperiam dolorum
+								blanditiis magni sit dolore! Consequuntur eum hic, ducimus
+								explicabo doloremque suscipit repellendus esse placeat est
+								error, similique quod vitae inventore quis, aliquid numquam!
+								Corrupti, facilis. Eaque minus tenetur, veniam ratione magnam
+								soluta amet doloribus.
+							</div>
+							<div id="btn-see-more">ver mais</div>
+						</div>
+					</section>
+					<section class="discussions">
+						<h2 class="discussions__label">Discussões</h2>
+						<div class="discussions__content">
+							<div id="home-topic" class="home-topic">
+								<h3>Compartilhe suas ideias ou dúvidas com os autores!</h3>
+								<div class="icons-bar">
+									<img
+										src="./assets/icons/icon-plant.svg"
+										alt="icone de sustentabilidade"
+									/>
+									<img
+										src="./assets/icons/icon-qa.svg"
+										alt="Icone de pergunta e resposta"
+									/>
+									<img
+										src="./assets/icons/icon-idea.svg"
+										alt="Icone de pergunta e resposta"
+									/>
+								</div>
+								<p>
+									Sabia que o maior estímulo no desenvolvimento científico e
+									cultural é a curiosidade? Deixe seus questionamentos ou
+									sugestões para o autor!
+								</p>
+								<div class="btn-create-topic">
+									<button
+										id="btn-create-topic"
+										class="btn-create-topic__btn"
+										type="button"
+									>
+										<img
+											src="./assets/icons/icon-mais.svg"
+											class="d-inline-block"
+											alt="icone de adicionar topico"
+										/>
+										<span>criar tópico</span>
+									</button>
+									<div class="btn-create-topic__divider"></div>
+								</div>
+							</div>
+							<form id="new-topic" class="new-topic">
+								<h4 class="new-topic__header">
+									Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+									autores!
+								</h4>
+								<div class="subject">
+									<label class="subject__label">Asssunto</label>
+									<input
+										type="text"
+										class="subject__input"
+										placeholder="Defina um tópico sucinto para notificar os autores..."
+									/>
+								</div>
+								<div class="content">
+									<label class="content__label">Conteúdo</label>
+									<div id="text-editor" class="content__input"></div>
+									<div id="editor-toolbar">
+										<div id="editor-toolbar__toolbar">
+											<button class="ql-bold">B</button>
+											<button class="ql-italic">I</button>
+										</div>
+										<button
+											id="btn-send-new-topic"
+											type="submit"
+											class="btn-send-new-topic"
+										>
+											Enviar
+										</button>
+									</div>
+								</div>
+								<div class="new-topic__divider"></div>
+							</form>
+							<div class="acknowledgment-topic">
+								<h2>Seu tópico foi enviado com sucesso! :D</h2>
+								<h4>
+									Agradecemos por sua contribuição, uma notificação será enviada
+									ao seu email assim que seu tópico for respondido!
+								</h4>
+								<a href="#">Descubra outros trabalhos!</a>
+								<div id="btn-create-new-topic" class="btn-create-topic">
+									<button
+										id="btn-create-topic"
+										class="btn-create-topic__btn"
+										type="button"
+									>
+										<span>criar novo tópico</span>
+									</button>
+									<div class="btn-create-topic__divider"></div>
+								</div>
+							</div>
+							<!-- secao de perguntas -->
+							<div class="questions">
+								<div class="question">
+									<div class="question-container">
+										<div
+											data-bs-target="#collapse-replies1"
+											data-bs-toggle="collapse"
+											class="question-toggle"
+										>
+											<header class="question-header">
+												<h5 class="question__subject">
+													Assunto da pergunta aparece aqui
+												</h5>
+												<div class="question__author">
+													Carlos Henrique Santos
+												</div>
+											</header>
+											<p class="question-body">
+												Comecinho da pergunta aparece aqui resente relato
+												inscreve-se no campo da análise da dimensão e impacto de
+												processo formativo situado impacto de processo formativo
+												processo resente relato inscreve-se no campo da análise
+												da dimensão e impacto de processo formativo situado
+												impacto de processo formativo processo?
+											</p>
+										</div>
+										<footer class="question-footer">
+											<button class="btn-more">
+												<img
+													src="./assets/icons/more.svg"
+													alt="icone de menu"
+												/>
+											</button>
+											<button class="btn-like">
+												<img
+													src="./assets/icons/icon-favorite.svg"
+													alt="Icone de like da pergunta"
+												/>
+											</button>
+											<span>1 like</span>
+											<span
+												data-bs-target="#collapse-replies1"
+												data-bs-toggle="collapse"
+												class="replies-text"
+												>1 resposta</span
+											>
+										</footer>
+									</div>
+									<div id="collapse-replies1" class="question-replies collapse">
+										<div class="reply reply-author">
+											<div class="reply__content">
+												<div class="reply-header">
+													Adriano da Silva
+													<div class="author-badge">
+														<span>Autor</span>
+														<img
+															src="./assets/icons/icon-autor-coautor.svg"
+															alt=""
+														/>
+													</div>
+												</div>
+												<div class="reply-body">
+													Resposta do autor é aqui. Relato inscreve-se no campo
+													da análise da dimensão e impacto de processo formativo
+													situado impacto de processo formativo processo resente
+													relato inscreve-se no campo da análise da dimensão e
+													impacto de processo formativo situado impacto de
+													processo formativo processo.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="question">
+									<div class="question-container">
+										<div
+											data-bs-target="#collapse-replies2"
+											data-bs-toggle="collapse"
+											class="question-toggle"
+										>
+											<header class="question-header">
+												<h5 class="question__subject">
+													Assunto da pergunta aparece aqui
+												</h5>
+												<div class="question__author">
+													Carlos Henrique Santos
+												</div>
+											</header>
+											<p class="question-body">
+												Comecinho da pergunta aparece aqui resente relato
+												inscreve-se no campo da análise da dimensão e impacto de
+												processo formativo situado impacto de processo formativo
+												processo resente relato inscreve-se no campo da análise
+												da dimensão e impacto de processo formativo situado
+												impacto de processo formativo processo?
+											</p>
+										</div>
+
+										<footer class="question-footer">
+											<button class="btn-more">
+												<img
+													src="./assets/icons/more.svg"
+													alt="icone de menu"
+												/>
+											</button>
+											<button class="btn-like">
+												<img
+													src="./assets/icons/icon-favorite.svg"
+													alt="Icone de like da pergunta"
+												/>
+											</button>
+											<span>4 likes</span>
+											<span
+												class="replies-text"
+												data-bs-target="#collapse-replies2"
+												data-bs-toggle="collapse"
+												>4 respostas</span
+											>
+										</footer>
+									</div>
+									<div id="collapse-replies2" class="question-replies collapse">
+										<div class="reply reply-author">
+											<div class="reply__content">
+												<div class="reply-header">
+													Adriano da Silva
+													<div class="author-badge">
+														<span>Autor</span>
+														<img
+															src="./assets/icons/icon-autor-coautor.svg"
+															alt=""
+														/>
+													</div>
+												</div>
+												<div class="reply-body">
+													Resposta do autor é aqui. Relato inscreve-se no campo
+													da análise da dimensão e impacto de processo formativo
+													situado impacto de processo formativo processo resente
+													relato inscreve-se no campo da análise da dimensão e
+													impacto de processo formativo situado impacto de
+													processo formativo processo.
+												</div>
+											</div>
+										</div>
+										<div class="reply">
+											<div class="reply__content">
+												<div class="reply-header">Carlos Henrique Santos</div>
+												<div class="reply-body">
+													Consegui entender melhor agora! Parece que a variação
+													da análise da dimensão e impacto de processo formativo
+													situado impacto de processo formativo. <br />
+													<br />
+													Obrigada pela resposta, muito interessante o seu
+													trabalho!
+												</div>
+											</div>
+										</div>
+										<div class="reply reply-author">
+											<div class="reply__content">
+												<div class="reply-header">
+													Carmila Ferreira Andrade
+													<div class="author-badge">
+														<span>Coautor</span>
+														<img
+															src="./assets/icons/icon-autor-coautor.svg"
+															alt=""
+														/>
+													</div>
+												</div>
+												<div class="reply-body">
+													Também ínteressante lembrar que o relato inscreve-se
+													no campo da análise da dimensão e impacto de processo
+													formativo situado impacto de processo formativo
+													processo resente relato inscreve-se no campo da
+													análise da dimensão e impacto de processo formativo
+													situado impacto de processo formativo processo. <br />
+													<br />
+													Situado impacto de processo formativo processo resente
+													relato inscreve-se no campo da análise da dimensão e
+													impacto de processo formativo situado impacto de
+													processo formativo processo.
+												</div>
+											</div>
+										</div>
+										<div class="reply reply-author">
+											<div class="reply__content">
+												<div class="reply-header">
+													Ana Carolina
+													<div class="author-badge">
+														<span>Autor</span>
+														<img
+															src="./assets/icons/icon-autor-coautor.svg"
+															alt=""
+														/>
+													</div>
+												</div>
+												<div class="reply-body">
+													Resposta do autor é aqui. Relato inscreve-se no campo
+													da análise da dimensão e impacto de processo formativo
+													situado impacto de processo formativo processo resente
+													relato inscreve-se no campo da análise da dimensão e
+													impacto de processo formativo situado impacto de
+													processo formativo processo.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+				<!-- Rodape (footer) da pagina -->
+				<footer class="row g-0 footer-container">
+					<div class="footer__divider"></div>
+					<div class="col-md-3">
+						<a href="#" class="d-flex justify-content-center">
+							<img src="./assets/images/logo-galoa.jpg" class="footer__img" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<div class="footer__text">
+							<p>
+								<strong
+									>Preservar a memória do evento e ampliar o acesso ao
+									conhecimento científico</strong
+								>
+								gerado em eventos é a razão de ser da plataforma Galoá
+								Proceedings.
+							</p>
+							<p>
+								Os trabalhos publicados aqui têm maior alcance e ficam
+								disponíveis para toda a comunidade científica, mantendo aceso o
+								debate científico fomentado pelos encontros e aumentando o
+								impacto do evento.
+							</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

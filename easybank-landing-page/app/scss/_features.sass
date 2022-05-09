@@ -1,0 +1,64 @@
+#features-section
+	background-color: $lightGrayishBlue
+	padding-top: 3.875rem
+	padding-bottom: 3.75rem
+	@include breakpoint-up(large)
+		padding-top: 6.875rem
+	
+.features
+	text-align: center
+	@include breakpoint-up(large)
+		text-align: left
+		
+	&__intro
+		width: 100%
+		margin-bottom: 3.375rem
+		@include breakpoint-up(large)
+			max-width: 60%
+			margin-bottom: 4.5rem
+
+
+		h2
+			font-size: 1.75rem
+			margin-bottom: 1.5rem
+
+			@include breakpoint-up(large)
+				font-size: 2.25rem
+				margin-bottom: 2rem
+		p
+	
+	&__container
+
+		@include breakpoint-up(medium)
+			display: flex
+			flex-wrap: wrap
+
+		.feature
+			&:not(:last-child)
+				margin-bottom: 2rem
+			
+			
+			
+			@include breakpoint-up(medium)
+				flex-basis: 50%
+				&:nth-child(odd)
+					padding-right: 1.5rem
+
+			@include breakpoint-up(large)
+				flex-grow: 1
+				flex-basis: 0
+				margin-bottom: 0
+				&:not(:last-child)
+					padding-right: 1.5rem
+					
+			&__icon
+				height: 4.5rem
+				width: 4.5rem
+				margin-bottom: 1.375rem
+				@include breakpoint-up(large)
+					margin-bottom: 2.5rem
+			&__title
+				margin-bottom: 2.125rem
+				@include breakpoint-up(large)
+					margin-bottom: 2.125rem
+			&__description

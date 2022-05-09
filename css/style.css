@@ -6,6 +6,63 @@
 
 html {
   font-size: 100%;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #cdcdcd;
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.content__header {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #E6AF2E;
+}
+.content__header .symbols {
+  color: #0081A7;
+}
+.content__img {
+  height: 18.75rem;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0.3125rem;
+  color: #222222;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.content__img img {
+  flex-grow: 1;
+  border: none;
+  border-color: #ffffff;
+}
+.content__img h4, .content__img h5 {
+  font-size: 0.75rem;
+}
+.content__footer {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  color: #E6AF2E;
+}
+.content__footer .symbols {
+  color: #0081A7;
 }
 
 body {
@@ -68,7 +125,15 @@ body {
   top: calc(var(--pos) * 200vh);
 }
 .column .bg-guide svg {
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 105%;
+}
+@media (min-width: 40em) {
+  .column .bg-guide svg {
+    height: 100%;
+  }
 }
 
 .left-column {
@@ -95,4 +160,108 @@ body {
 .page {
   height: 100vh;
   width: 100vw;
+  display: grid;
+  place-items: center;
+  pointer-events: all;
+}
+.page .content {
+  height: 85%;
+  width: 79%;
+  overflow: auto;
+}
+
+.page-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-home .content {
+  display: flex;
+  flex-direction: column;
+}
+.page-home__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.page-home__subtitle {
+  margin-bottom: 1.5rem;
+}
+.page-home__cv {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+.page-home__cv h2 {
+  margin-bottom: 0.5rem;
+}
+.page-home__cv .cv {
+  width: 100%;
+}
+.page-home__hint {
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+.page-home__hint .guide-icon {
+  display: inline-block;
+  background-image: url("../assets/icons/guide.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+}
+
+.page-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.page-about__greetings {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-projects {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.page-projects .content {
+  position: relative;
+  width: 89%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+.page-projects .content .projects-container {
+  display: flex;
+  height: 86%;
+  width: 100%;
+  position: relative;
+  left: 0;
+  transition: left 300ms ease-in-out;
+}
+.page-projects .content .navigation-container {
+  height: 14%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 1rem;
+}
+.page-projects .content .navigation-container .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.page-projects .content .navigation-container .nav-arrow {
+  background-image: url("../assets/icons/nav-arrow.svg");
+  height: 50px;
+  width: 50px;
+  transition: opacity 300ms ease-in-out;
+}
+.page-projects .content .navigation-container .arrow-prev {
+  transform: rotate(180deg);
+}
+.page-projects .content iframe {
+  min-height: 100%;
+  min-width: 100%;
 }/*# sourceMappingURL=style.css.map */

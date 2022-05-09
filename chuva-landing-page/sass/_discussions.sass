@@ -1,0 +1,442 @@
+.discussions  
+	border: 1px solid #ececec 
+	border-radius: 3px 
+	margin-top: 30px 
+ 
+
+	&__label  
+		background-color: $secondary 
+		padding: 10px 16px 
+		margin-bottom: 0 
+		font-size: 20px 
+		font-weight: 500 
+		line-height: 25px 
+		font-family: $font-roboto 
+		font-style: normal 
+		color: #4e4e4e 
+	
+
+	&__content  
+		padding: 15px 
+ 
+
+/* ====================== create topico ================================ */
+
+.home-topic  
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+ 
+
+.home-topic > h3  
+	font-family: $font-roboto 
+	font-style: normal 
+	font-weight: 700 
+	font-size: 18px 
+	line-height: 21px 
+	margin-bottom: 27px 
+	color: $primary 
+ 
+
+.icons-bar  
+	display: flex 
+	margin-bottom: 35.06px 
+ 
+
+.icons-bar :not(:last-child)  
+	margin-right: 51.74px 
+ 
+
+.home-topic > p  
+	font-family: $font-quicksand 
+	font-style: normal 
+	font-weight: 400 
+	font-size: 14px 
+	line-height: 19px 
+	text-align: center 
+	color: #595959 
+	width: clamp(200px, 100%, 626px) 
+ 
+
+.btn-create-topic  
+	position: relative 
+	width: 100% 
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+	margin-bottom: 15px 
+ 
+
+	&__divider  
+		position: absolute 
+		height: 0px 
+		border: 1px solid $border-color-1 
+		width: 100% 
+		top: calc(50% - 2px) 
+		z-index: -1 
+	
+
+	&__btn  
+		background: linear-gradient(180deg, #feb254 0%, #f0813d 100%) 
+		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24) 
+		border-radius: 4px 
+		border: none 
+		padding-top: 8px 
+		padding-bottom: 8px 
+		padding-left: 14px 
+		padding-right: 13px 
+		font-family: $font-quicksand 
+		font-style: normal 
+		font-weight: 700 
+		font-size: 15px 
+		line-height: 16px 
+		text-align: center 
+		display: flex 
+		color: $text-light 
+	
+
+	&__btn span  
+		margin-left: 6px 
+ 
+
+/* ========================= editor de new topico ======================== */
+
+.new-topic  
+	width: 100% 
+	display: none 
+
+	&__header  
+		font-family: $font-quicksand 
+		font-style: normal 
+		font-weight: 400 
+		font-size: 14px 
+		line-height: 18px 
+		text-align: center 
+		color: $text 
+		margin-bottom: 22px 
+
+	&__divider  
+		border: 1px solid $border-color-1 
+		margin-bottom: 30px 
+
+
+.subject  
+	display: flex 
+	flex-direction: column 
+	margin-bottom: 10px 
+
+	&__label  
+		font-family: $font-roboto 
+		font-style: normal 
+		font-weight: 700 
+		font-size: 16px 
+		line-height: 19px 
+		color: $primary 
+		margin-bottom: 1px 
+
+	&__input  
+		border-radius: 3px 
+		border: 1px solid #ccc 
+		padding-top: 10px 
+		padding-bottom: 11px 
+		padding-left: 23px 
+		padding-right: 23px 
+
+.content  
+	display: flex 
+	flex-direction: column 
+	margin-bottom: 15px 
+
+	&__label  
+		font-family: $font-roboto 
+		font-style: normal 
+		font-weight: 700 
+		font-size: 16px 
+		line-height: 19px 
+		color: $primary 
+		margin-bottom: 4px 
+
+	&__input  
+		border: 1px solid #ccc 
+		border-radius: 3px 3px 0px 0px 
+		resize: none 
+		height: 200px 
+		width: 100% 
+ 
+
+#editor-toolbar  
+	display: flex 
+ 
+
+	&__toolbar  
+		flex-grow: 7 
+		border-top: none 
+		border-radius: 0px 0px 0px 3px 
+		display: flex 
+		background: #eaf1f2 
+ 
+
+.btn-send-new-topic  
+	font-family: $font-quicksand 
+	font-style: normal 
+	font-weight: 700 
+	font-size: 15px 
+	line-height: 16px 
+	text-align: center 
+	border: none 
+	color: $text-light 
+	flex-grow: 3 
+	background: linear-gradient(180deg, #feb154 0%, #f1833e 100%) 
+	border-radius: 0px 0px 3px 0px 
+ 
+
+/* ================ acknowledgment de novo topico ========== */
+
+.acknowledgment-topic  
+	display: none 
+	flex-direction: column 
+	align-items: center 
+ 
+
+	> h2  
+		font-family: $font-roboto 
+		font-style: normal 
+		font-weight: 700 
+		font-size: 18px 
+		line-height: 21px 
+		text-align: center 
+		color: $primary 
+		margin-bottom: 18px 
+	
+
+	> h4  
+		font-family: $font-quicksand 
+		font-style: normal 
+		font-weight: 400 
+		font-size: 14px 
+		line-height: 19px 
+		text-align: center 
+		color: #595959 
+		margin-bottom: 29px 
+	
+
+	> a  
+		font-family: $font-quicksand 
+		font-style: normal 
+		font-weight: 500 
+		font-size: 14px 
+		line-height: 137.5% 
+		text-align: center 
+		text-decoration-line: underline 
+		color: #f48f44 
+		margin-bottom: 47px 
+ 
+
+/* ================================ perguntas ==============================*/
+
+.question  
+	border-radius: 4px 
+	border: 1px solid $border-color-1 
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12) 
+	overflow: hidden 
+ 
+
+.question:not(:last-child)  
+	margin-bottom: 17px 
+ 
+
+.question-container  
+	padding-left: 24px 
+	padding-right: 23px 
+	padding-bottom: 18px 
+	padding-top: 17px 
+ 
+.question-header .question
+
+	&__subject
+		font-family: $font-quicksand 
+		font-style: normal 
+		font-weight: 700 
+		font-size: 16px 
+		line-height: 20px 
+		color: $primary 
+		margin-bottom: 5px
+
+	&__author
+		font-family: $font-quicksand 
+		font-style: normal 
+		font-weight: 600 
+		font-size: 12px 
+		line-height: 15px 
+		color: $text 
+		margin-bottom: 10px
+
+.question-body  
+	text-overflow: ellipsis 
+	-webkit-line-clamp: 2 
+	line-clamp: 2 
+	white-space: normal 
+	display: -webkit-box 
+	overflow: hidden 
+	-webkit-box-orient: vertical 
+	margin-bottom: 0 
+	font-family: "Quicksand" 
+	font-style: normal 
+	font-weight: 400 
+	font-size: 14px 
+	line-height: 18px 
+	color: #4d4d4d 
+ 
+
+.question-body-expanded  
+	text-overflow: ellipsis 
+	-webkit-line-clamp: unset 
+	line-clamp: unset 
+	white-space: normal 
+	display: -webkit-box 
+	overflow: hidden 
+	-webkit-box-orient: vertical 
+ 
+
+.question-footer  
+	margin-top: 11px 
+	display: flex 
+	align-items: center 
+ 
+
+.question-footer :not(:last-child)  
+	margin-right: 15px 
+ 
+
+.question-footer button  
+	border: none 
+ 
+
+.question-footer .btn-like  
+	padding-left: 6px 
+	padding-right: 7px 
+	padding-top: 3px 
+	padding-bottom: 2px 
+	height: 19px 
+	display: grid 
+	place-items: center 
+	background: $primary 
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24) 
+	border-radius: 2px 
+ 
+
+.question-footer .btn-more  
+	display: grid 
+	place-items: center 
+	max-height: 18px 
+	background-color: transparent 
+ 
+
+.question-footer .replies-text,
+.question-toggle  
+	cursor: pointer 
+ 
+
+.question-overlay  
+	position: relative 
+ 
+
+.question-overlay__overlay  
+	display: none 
+	z-index: 10 
+ 
+
+.question.question-overlay > .question-container  
+	filter: blur(3px) 
+	background-color: #ddd 
+	opacity: 0.3 
+ 
+
+.question-overlay .question-overlay__overlay  
+	position: absolute 
+	top: 0 
+	bottom: 0 
+	left: 0 
+	right: 0 
+	display: flex 
+	flex-direction: column 
+	align-items: center 
+	justify-content: center 
+ 
+
+.question-overlay__overlay h3  
+	font-family: $font-quicksand 
+	font-style: normal 
+	font-weight: 700 
+	font-size: 16px 
+	line-height: 20px 
+	color: #707070 
+	margin-bottom: 8px 
+ 
+
+.question-overlay__overlay a  
+	font-family: "Segoe UI" 
+	font-style: normal 
+	font-weight: 400 
+	font-size: 14px 
+	line-height: 19px 
+	text-decoration-line: underline 
+	color: $primary 
+ 
+
+.question-overlay__overlay .icon-feedback  
+	fill: black 
+	height: 21px 
+	margin-bottom: 7.78px 
+ 
+
+/* ================= respostas da perguntas ============================== */
+
+.question-replies .reply  
+	border-top: 1px solid $border-color-1 
+	padding-top: 18px 
+	padding-left: 23px 
+	padding-bottom: 18px 
+	padding-right: 23px 
+ 
+
+.reply-header  
+	font-family: $font-quicksand 
+	font-style: normal 
+	font-weight: 700 
+	font-size: 12px 
+	line-height: 15px 
+	color: $text 
+	margin-bottom: 10px 
+	display: flex 
+	align-items: center 
+	justify-content: space-between 
+ 
+
+.reply-body  
+	font-family: $font-quicksand 
+	font-style: normal 
+	font-weight: 400 
+	font-size: 14px 
+	line-height: 18px 
+	color: #4d4d4d 
+ 
+
+.author-badge  
+	display: none 
+	font-family: $font-quicksand 
+	font-style: normal 
+	font-weight: 700 
+	font-size: 14px 
+	line-height: 18px 
+	color: $primary 
+ 
+
+.reply-author  
+	background-color: #f8f8f8 
+ 
+
+.reply-author .author-badge  
+	display: block 
+ 
+ 

@@ -1,0 +1,97 @@
+.header
+	background-color: $white
+	z-index: 999
+	position: relative
+	&.open
+		.header__toggle
+			>span
+				&:first-child
+					transform: rotateZ(45deg)
+
+				&:nth-child(2)
+					opacity: 0
+
+				&:last-child
+					transform: rotateZ(-45deg)
+			
+		.overlay
+	
+	.overlay
+		opacity: 0
+		visibility: hidden
+		position: fixed
+		transition: opacity 1s ease-in-out
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background: linear-gradient($darkBlue, transparent)
+
+	nav
+		padding-top: 1.0625rem
+		padding-bottom: 1.0625rem
+		position: relative
+		background-color: $white
+		padding-right: 1.25rem
+		padding-left: 1.25rem
+		margin-right: 0
+		margin-left: 0
+		@include breakpoint-up(large)
+			margin: 0 auto
+
+	&__menu
+		background-color: $white
+		margin: 1.625rem
+		padding: 1.625rem 0
+		border-radius: 5px
+		position: relative
+		top: 3.75rem
+
+		a
+			display: block
+			color: $darkBlue
+			padding: 0.625rem
+			text-align: center
+
+	&__logo //site logo
+
+	&__toggle //mobile menu
+
+		> span
+			display: block
+			width: 26px
+			height: 2px
+			background-color: $darkBlue
+			transition: transform 300ms ease-in-out, opacity 300ms ease-in-out
+			transform-origin: 3px 1px
+
+			&:not(:last-child)
+				margin-bottom: 5px
+	
+	&__links
+		a
+			font-size: $font-sm
+			color: $grayishBlue
+			transition: color 300ms ease-in-out
+			position: relative
+
+			&:not(last-child)
+				margin-right: 32px
+			
+			&::before
+				content: ""
+				position: absolute
+				height: 5px
+				width: 100%
+				background:  linear-gradient(to right, $limeGreen, $brightCyan)
+				bottom: -30px
+				opacity: 0
+				transition: opacity 300ms ease-in-out
+
+			&:hover
+				color: $darkBlue
+
+				&::before
+					opacity: 1
+	
+
