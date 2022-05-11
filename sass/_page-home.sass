@@ -5,20 +5,39 @@
 	.content
 		display: flex
 		flex-direction: column
+		justify-content: space-between
 
 	&__title
 		font-size: $font-lg
-		margin-bottom: 2rem
+		// margin-bottom: 2rem
 		margin-top: 2rem
 	&__subtitle
-		margin-bottom: 1.5rem
+		// margin-bottom: 1.5rem
 	&__cv
-		flex-grow: 1
+		display: flex
+		flex-direction: column
+		align-items: center
+		
 		margin-bottom: 1rem
 		h2
 			margin-bottom: 0.5rem
+		
 		.cv
+			margin-bottom: 0.5rem
 			width: 100%
+			@include breakpoint-up(medium)
+				height: 400px
+				width: unset
+		a
+			border: 1px solid $text-white
+			padding: 0.5rem 1rem
+			font-weight: bold
+			color: inherit
+
+			&:hover, &:active
+				background-color: $text-white
+				color: $eerieBlack
+		
 		
 	&__hint
 		margin-bottom: 0.5rem

@@ -1,0 +1,104 @@
+#footer-section
+	background-color: $darkBlue
+	padding-top: 2.25rem
+	padding-bottom: 2.5rem
+	@include breakpoint-up(medium)
+		padding-top: 2.75rem
+		padding-bottom: 2.75rem
+
+.footer
+	display: flex
+	flex-direction: column
+	align-items: center
+	@include breakpoint-up(medium)
+		flex-direction: row
+		align-items: unset
+
+	&__left
+		display: flex
+		flex-direction: column
+		align-items: center
+		@include breakpoint-up(medium)
+			flex-grow: 6
+			flex-direction: row
+			align-items: unset
+
+	&__logo
+		display: flex
+		flex-direction: column
+		align-items: center
+		@include breakpoint-up(medium)
+			align-items: unset
+			justify-content: space-between
+			margin-right: 12%
+		> svg 
+			margin-bottom: 1.625rem
+			@include breakpoint-up(medium)
+				margin-bottom: 0px
+			> g > path
+				fill: $white
+		
+		.social-medias
+			display: flex
+			margin-bottom: 1.5rem 
+			@include breakpoint-up(medium)
+				margin-bottom: 0px
+			a
+				display: block
+				height: 20px
+				width: 20px
+				svg
+					height: 20px
+					width: 20px
+					
+					
+					path
+						transition: fill 150ms ease-in-out
+					&:hover path
+						fill: $limeGreen
+
+				&:not(:last-child)
+					margin-right: 0.75rem
+
+	&__links
+		display: flex
+		flex-direction: column
+		text-align: center
+		margin-bottom: 2.25rem
+		@include breakpoint-up(medium)
+			margin-bottom: 0
+			text-align: left
+			flex-direction: row
+			flex-grow: 1
+			justify-content: space-evenly
+		
+		.links
+			@include breakpoint-up(medium)
+				margin-right: 12%
+			a
+				display: block
+				color: $grayishBlue
+				padding: 0.5rem
+				font-size: $font-sm
+				transition: color 150ms ease-in-out
+				&:hover
+					color: $limeGreen
+
+	&__button
+		display: flex
+		flex-direction: column
+		align-items: center
+		font-size: $font-sm
+		@include breakpoint-up(medium)
+			margin-left: auto
+			flex-grow: 4
+			justify-content: space-between
+			align-items: flex-end
+
+		a
+			font-size: $font-sm
+			margin-bottom: 1.625rem
+			@include breakpoint-up(medium)
+				margin-bottom: 0px
+		p
+			padding-bottom: 0.5rem

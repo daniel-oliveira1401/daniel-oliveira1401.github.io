@@ -4,6 +4,53 @@ let pos = {
 	top: 0
 };
 
+let screens = [
+	{
+		name: "home",
+		pos: {
+			top: 0,
+			left: 0
+		}
+	},
+	{
+		name: "about",
+		pos: {
+			top: -200,
+			left: 0
+		}
+	},
+	{
+		name: "knowledge",
+		pos: {
+			top: -200,
+			left: -200
+		}
+	},
+	{
+		name: "projects",
+		pos: {
+			top: -200,
+			left: -400
+		}
+	},
+	{
+		name: "contact",
+		pos: {
+			top: 0,
+			left: -400
+		}
+	},
+	{
+		name: "info",
+		pos: {
+			top: 0,
+			left: -200
+		}
+	}
+];
+
+let currentScreen = screens[0];
+
 let pageDistance = 200; //200 vw or vh from one page to another
 
 let mode = "prod"; //can be "prod" or "dev"
@@ -51,6 +98,25 @@ $(".transition.forwards")
 
 function updateMainContainer() {
 	let mainContainer = $("#main-container");
+
+	//update the currentScreen variable
+	let i = screens.findIndex((screen) => {
+		return screen.pos.left == pos.left && screen.pos.top == pos.top;
+	});
+
+	currentScreen = screens[i];
+
+	if (currentScreen.name == "projects") {
+		//remove the transition from the main container after it occurs if the current screen if the projects screen. This has to be done so that the input fields of the embeded projects do not interfere with the main container's positioning.
+		setTimeout(() => {
+			mainContainer.css("transition", "none");
+		}, 1000);
+	} else {
+		mainContainer.css("transition", "top 1s ease-in-out, left 1s ease-in-out");
+	}
+
 	mainContainer.css("top", `${pos.top}vh`);
 	mainContainer.css("left", `${pos.left}vw`);
 }
+
+//updateMainContainer();

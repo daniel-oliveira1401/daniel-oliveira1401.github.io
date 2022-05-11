@@ -22,3 +22,13 @@ $(".arrow-next").click(() => {
 		$(".arrow-prev").removeClass("disabled");
 	}
 });
+
+$("#btn-see-projects").click(() => {
+	$(".page-projects .content__overlay").fadeOut();
+});
+
+//the href attribute of the anchor elements <a> need to be removed from the embeded
+//projects so that the page won't jump to the top after the user clicks a button
+$("iframe").on("load", () => {
+	$("iframe").contents().find("a").removeAttr("href");
+});

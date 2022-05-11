@@ -4,12 +4,49 @@
 	align-items: flex-end
 	.content
 		position: relative
-		// background-color: yellow
 		width: 89%
 		height: 100%
-		
 		overflow-x: hidden
 		overflow-y: visible
+
+		&__overlay
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 86%
+			width: 100%
+			background-color: rgba(0, 0, 0, 0.75)
+			z-index: 20
+			display: flex
+			align-items: center
+			flex-direction: column
+			justify-content: center
+
+			#btn-see-projects
+				padding: 0.5rem 1rem
+				background-color: $white
+				color: $eerieBlack
+				border: none
+			
+			.ex
+				&-prev-arrow
+					background-image: url("../assets/icons/nav-arrow.svg")
+					background-size: auto 100%
+					background-repeat: no-repeat
+					width: 3ch
+					height: 3ch
+					display: inline-block
+					position: relative
+					transform: translateY(35%) rotate(180deg)
+				&-next-arrow
+					background-image: url("../assets/icons/nav-arrow.svg")
+					background-size: 100% auto
+					background-repeat: no-repeat
+					width: 3ch
+					height: 3ch
+					display: inline-block
+					position: relative
+					transform: translateY(35%)
 
 		.projects-container
 			display: flex
