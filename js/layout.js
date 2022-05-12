@@ -1,4 +1,14 @@
 //handles the svg animation and screen translation for horizontal navigation
+
+$(window).on("load", () => {
+	setTimeout(() => {
+		window.scrollTo(0, 0);
+		updateMainContainer();
+	}, 10);
+
+	$(".loading-overlay").fadeOut();
+});
+
 let pos = {
 	left: 0,
 	top: 0
@@ -118,5 +128,3 @@ function updateMainContainer() {
 	mainContainer.css("top", `${pos.top}vh`);
 	mainContainer.css("left", `${pos.left}vw`);
 }
-
-//updateMainContainer();

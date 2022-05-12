@@ -16,6 +16,10 @@ body
 	font-size: 1rem
 	color: $text-white
 	text-align: center
+	top: 0px !important //due to google translate's top bar
+
+	> .skiptranslate
+		display: none !important
 
 //dark theme scrollbar for webkit browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and others)
 //firefox already does that by default
@@ -33,7 +37,7 @@ p
 	margin-bottom: 2rem
 
 a, a:visited, a:active, a:hover
-	text-decoration: none
+	color: yellow
 
 
 strong
@@ -57,20 +61,24 @@ strong
 		.img-container 
 			position: relative
 			width: min-content
+
+		&.shadow
 		
-		.img-container::after 
-			pointer-events: none
-			content: ""
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			box-shadow: inset 0px 0px 20px 20px $eerieBlack
+			.img-container::after 
+				pointer-events: none
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				box-shadow: inset 0px 0px 20px 20px $eerieBlack
 		
 
 		h4, h5
 			font-size: $font-xs
+			margin-top: 1rem
+			margin-bottom: 1rem
 
 			a
 				color: yellow
@@ -83,5 +91,16 @@ strong
 		color: $goldenRod
 		.symbols
 			color: $celadonBlue
+
+//helper classes
+
+.bg-light
+	background-color: $white !important
+
+.rounded-3
+	border-radius: 1rem
+
+.p-1
+	padding: 0.5rem
 
 // icons https://github.com/devicons/devicon/tree/master/icons
