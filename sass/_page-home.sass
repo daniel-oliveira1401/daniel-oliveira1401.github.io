@@ -7,12 +7,21 @@
 		flex-direction: column
 		justify-content: space-between
 
+	header
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
 	&__title
 		font-size: $font-lg
-		// margin-bottom: 2rem
+		margin-bottom: 0.25rem
+		@include breakpoint-up(large)
+			margin-bottom: 2rem
 		margin-top: 2rem
 	&__subtitle
-		// margin-bottom: 1.5rem
+		font-size: $font-md
+		@include breakpoint-up(large)
+			font-size: $font-md-desktop
 	&__cv
 		display: flex
 		flex-direction: column

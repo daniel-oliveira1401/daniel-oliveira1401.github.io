@@ -1,6 +1,7 @@
 //handles the svg animation and screen translation for horizontal navigation
 
 $(window).on("load", () => {
+	//reset the scroll position when window loads
 	setTimeout(() => {
 		window.scrollTo(0, 0);
 		updateMainContainer();

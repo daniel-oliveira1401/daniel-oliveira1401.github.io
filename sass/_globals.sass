@@ -13,13 +13,24 @@ body
 	width: 100%
 	overflow: hidden
 	font-family: 'Roboto', sans-serif
-	font-size: 1rem
+	font-size: $font-md
+	@include breakpoint-up(medium)
+		font-size: $font-md-desktop
 	color: $text-white
 	text-align: center
+	//google translate
 	top: 0px !important //due to google translate's top bar
 
 	> .skiptranslate
 		display: none !important
+//google translate tooltip
+#goog-gt-tt, .goog-te-balloon-frame
+	display: none !important
+
+//google translate highlight on hover
+.goog-text-highlight
+	background: none !important
+	box-shadow: none !important
 
 //dark theme scrollbar for webkit browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and others)
 //firefox already does that by default
@@ -75,8 +86,10 @@ strong
 				box-shadow: inset 0px 0px 20px 20px $eerieBlack
 		
 
-		h4, h5
+		h4, figcaption
 			font-size: $font-xs
+			@include breakpoint-up(large)
+				font-size: $font-md
 			margin-top: 1rem
 			margin-bottom: 1rem
 
@@ -102,5 +115,3 @@ strong
 
 .p-1
 	padding: 0.5rem
-
-// icons https://github.com/devicons/devicon/tree/master/icons

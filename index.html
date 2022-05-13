@@ -7,6 +7,10 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
 		/>
+		<meta
+			name="description"
+			content="Portifólio do Daniel Oliveira. Uma experiência única de portifólio, construída com muito amor :)"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
 		<link
 			rel="shortcut icon"
@@ -37,6 +41,7 @@
 		<script src="js/page-projects.js" defer></script>
 		<script src="js/page-contact.js" defer></script>
 		<script src="js/page-info.js" defer></script>
+
 		<title>Portifolio Daniel Oliveira</title>
 	</head>
 	<body>
@@ -51,7 +56,6 @@
 				<div id="google_translate_element"></div>
 			</div>
 		</div>
-
 		<style>
 			.loading-overlay {
 				position: fixed;
@@ -117,28 +121,34 @@
 		</div>
 		<div id="main-container" class="">
 			<div class="top-row row">
-				<div class="page-home page">
+				<section class="page-home page">
 					<div class="content">
-						<div class="page-home__title">Daniel Oliveira</div>
-						<div class="page-home__subtitle">
-							Desenvolvedor Frontend apaixonado por aprender!
-						</div>
+						<header>
+							<h1 class="page-home__title">Daniel Oliveira</h1>
+							<h2 class="page-home__subtitle">
+								Desenvolvedor Frontend apaixonado por aprender!
+							</h2>
+						</header>
 						<div class="page-home__cv">
 							<h2>Meu currículo</h2>
-							<img class="cv" src="/assets/documents/cv-img.JPG" alt="" />
+							<img
+								class="cv"
+								src="/assets/documents/cv-img.JPG"
+								alt="Imagem do meu currículo"
+							/>
 							<a
 								href="./assets/documents/resume-daniel-oliveira.pdf"
 								target="_blank"
 								download
-								>Baixar</a
+								>Download</a
 							>
 						</div>
-						<div class="page-home__hint">
+						<p class="page-home__hint">
 							Clique nos Guias <span class="guide-icon"></span> para navegar
 							pelo site, mas cuidado para não se perder ;)
-						</div>
+						</p>
 					</div>
-				</div>
+				</section>
 				<div class="bg-guide" style="--pos: 0">
 					<svg
 						id="first-page"
@@ -213,13 +223,13 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-info page">
+				<section class="page-info page">
 					<div class="content">
-						<div class="content__header">
+						<h2 class="content__header">
 							<span class="symbols">&lt;</span>info<span class="symbols"
 								>&gt;</span
 							>
-						</div>
+						</h2>
 						<p>Este portifolio foi feito por mim com muito amor :)</p>
 						<p>Este portifolio está hospedado no Github Pages.</p>
 
@@ -238,7 +248,7 @@
 							>
 						</div>
 					</div>
-				</div>
+				</section>
 				<div class="bg-guide" style="--pos: 1">
 					<svg
 						class="horizontal-transition transition forwards"
@@ -312,13 +322,13 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-contact page">
+				<section class="page-contact page">
 					<div class="content">
-						<div class="content__header">
+						<h2 class="content__header">
 							<span class="symbols">&lt;</span>contato<span class="symbols"
 								>&gt;</span
 							>
-						</div>
+						</h2>
 						<p>Quer entrar em contato comigo?</p>
 						<p>Me mande um e-mail ;)</p>
 						<div class="contact-field">
@@ -350,17 +360,17 @@
 							>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 			<div class="bottom-row row">
-				<div class="page-about page">
+				<section class="page-about page">
 					<div class="content">
-						<div class="content__header">
+						<h2 class="content__header">
 							<span class="symbols">&lt;</span>sobre<span class="symbols"
 								>&gt;</span
 							>
-						</div>
-						<div class="page-about__greetings">Oi,</div>
+						</h2>
+						<p class="page-about__greetings">Oi,</p>
 						<p>meu nome é Daniel, tenho 19 anos e moro no Brasil 🙂</p>
 						<div class="content-row">
 							<p>
@@ -376,7 +386,7 @@
 										alt="image"
 									/>
 								</div>
-								<h5>Medição de ondas senoidais.</h5>
+								<figcaption>Medição de ondas senoidais.</figcaption>
 							</div>
 						</div>
 
@@ -395,7 +405,9 @@
 										alt=""
 									/>
 								</div>
-								<h5>Nosso TCC do SENAI.</h5>
+								<figcaption>
+									Nosso Trabalho de Conclusão de Curso do SENAI.
+								</figcaption>
 							</div>
 						</div>
 						<div class="content-row">
@@ -415,7 +427,9 @@
 										autoplay
 									></video>
 								</div>
-								<h5>Plataforma Arduino usada para o controle.</h5>
+								<figcaption>
+									Plataforma Arduino usada para o controle.
+								</figcaption>
 							</div>
 						</div>
 
@@ -440,7 +454,7 @@
 							>
 						</div>
 					</div>
-				</div>
+				</section>
 				<div class="bg-guide" style="--pos: 0">
 					<svg
 						class="horizontal-transition transition"
@@ -514,14 +528,14 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-knowledge page">
+				<section class="page-knowledge page">
 					<div class="content">
-						<div class="content__header">
+						<h2 class="content__header">
 							<span class="symbols">&lt;</span>conhecimentos<span
 								class="symbols"
 								>&gt;</span
 							>
-						</div>
+						</h2>
 						<p class="mb">
 							Comecei a programar com a linguagem <strong>C++</strong> para
 							microcontroladores no ambiente de desenvolvimento Arduino. Depois,
@@ -531,27 +545,33 @@
 							<p>
 								Em seguida, iniciei minha jornada de programação de computadores
 								e aprendi <strong>Java</strong>. O meu intuito de aprender Java
-								era criar um aplicativo mobile que permitisse controlar meu TCC
-								de Eletrônica via Bluetooth usando o ambiente de desenvolvimento
+								era criar um aplicativo mobile que permitisse controlar nosso
+								Trabalho de Conclusão de Curso de Eletrônica via Bluetooth
+								usando o ambiente de desenvolvimento
 								<strong>Android Studio</strong>. O resultado foi que consegui e
-								tiramos nota 100 no TCC 🎉
+								tiramos nota 100 no Trabalho de Conclusão de Curso 🎉
 							</p>
 							<div class="content__img">
 								<h4>Java</h4>
 								<div class="img-container bg-light p-1 rounded-3">
 									<img
 										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg"
-										alt=""
+										alt="Java trademark"
 									/>
 								</div>
-								<h5>Uma das linguages de programação mais famosas.</h5>
+								<figcaption>
+									Uma das linguages de programação mais famosas.
+								</figcaption>
 							</div>
 						</div>
 						<p class="mb">
 							Depois de me aventurar em <strong>Java</strong>, comecei a
 							aprender tecnologias relacionadas à <strong>Web</strong>. Fiz um
-							curso na Coursera oferecido pela
-							<strong>Johns Hopkins University</strong> sobre
+							<a
+								href="https://www.coursera.org/learn/html-css-javascript-for-web-developers"
+								>curso na Coursera</a
+							>
+							oferecido pela <strong>Johns Hopkins University</strong> sobre
 							<strong>HTML</strong>, <strong>CSS</strong> e
 							<strong>JavaScript</strong>. Nesse curso foi apresentado toda a
 							fundação necessária para construir landing pages e sites simples.
@@ -570,10 +590,12 @@
 								<div class="img-container bg-light rounded-3 p-1">
 									<img
 										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-										alt=""
+										alt="ReactJs trademark"
 									/>
 								</div>
-								<h5>Framework Frontend baseado em componentes</h5>
+								<figcaption>
+									Framework Frontend baseado em componentes
+								</figcaption>
 							</div>
 						</div>
 						<div class="content-row mb">
@@ -595,7 +617,7 @@
 										alt="Nodejs trademark"
 									/>
 								</div>
-								<h5>Tecnologia Backend</h5>
+								<figcaption>Tecnologia Backend</figcaption>
 							</div>
 						</div>
 						<p>
@@ -618,10 +640,10 @@
 									<img
 										class="bg-light rounded-3"
 										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original-wordmark.svg"
-										alt=""
+										alt="Webpack trademark"
 									/>
 								</div>
-								<h5>Bundler para tecnologias Web</h5>
+								<figcaption>Bundler para tecnologias Web</figcaption>
 							</div>
 						</div>
 						<div class="content-row mb">
@@ -639,10 +661,10 @@
 								<div class="img-container bg-light rounded-3">
 									<img
 										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original-wordmark.svg"
-										alt=""
+										alt="Git trademark"
 									/>
 								</div>
-								<h5>Software de Controle de Versão (VCS)</h5>
+								<figcaption>Software de Controle de Versão (VCS)</figcaption>
 							</div>
 						</div>
 						<div class="content-row reverse mb">
@@ -657,12 +679,12 @@
 								<div class="img-container bg-light rounded-3 p-1">
 									<img
 										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original-wordmark.svg"
-										alt=""
+										alt="Bootstrap trademark"
 									/>
 								</div>
-								<h5>
+								<figcaption>
 									Biblioteca Frontend para layouts responsivos e muito mais.
-								</h5>
+								</figcaption>
 							</div>
 						</div>
 
@@ -684,7 +706,7 @@
 							>
 						</div>
 					</div>
-				</div>
+				</section>
 				<div class="bg-guide" style="--pos: 1">
 					<svg
 						id="transitionFrom22To42"
@@ -759,14 +781,14 @@
 						</animateMotion>
 					</svg>
 				</div>
-				<div class="page-projects page">
+				<section class="page-projects page">
 					<div class="content">
 						<div class="content__overlay">
-							<div class="content__header">
+							<h2 class="content__header">
 								<span class="symbols">&lt;</span>projetos<span class="symbols"
 									>&gt;</span
 								>
-							</div>
+							</h2>
 							<p>Esses são alguns dos projetos que já fiz até agora.</p>
 							<p>
 								Sempre que termino um projeto novo, eu adiciono um preview dele
@@ -776,6 +798,9 @@
 								Use as setas <span class="ex-prev-arrow"></span> e
 								<span class="ex-next-arrow"></span> que estão presentes no topo
 								da página para navegar entre os projetos :D
+							</p>
+							<p>
+								Ah, e eles são interativos também, tente apertar os botões ;)
 							</p>
 							<button id="btn-see-projects">Entendi :)</button>
 							<div class="content__footer">
@@ -800,7 +825,7 @@
 							></iframe>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 			<div class="left-column column">
 				<div class="bg-guide" style="--pos: 0">
