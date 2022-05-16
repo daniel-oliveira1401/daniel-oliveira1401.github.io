@@ -18,6 +18,7 @@ body {
   color: #cdcdcd;
   text-align: center;
   top: 0px !important;
+  position: static !important;
 }
 @media (min-width: 40em) {
   body {
@@ -108,7 +109,7 @@ strong {
 }
 .content__footer {
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   margin-top: 3rem;
   color: #E6AF2E;
 }

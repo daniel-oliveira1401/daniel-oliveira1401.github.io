@@ -1,9 +1,22 @@
 //handles the svg animation and screen translation for horizontal navigation
 
+let aboutContent, //the .content element of the about page
+	aboutContentFirstScroll = true, //flag for the first time the about page scrolls
+	knowledgeContent, //the .content element of the knowledge page
+	knowledgeContentFirstScroll = true; //flag for the first time the knowledge page scrolls
+
 $(window).on("load", () => {
 	//reset the scroll position when window loads
 	setTimeout(() => {
 		window.scrollTo(0, 0);
+		aboutContent = $(".page-about .content");
+		knowledgeContent = $(".page-knowledge .content");
+
+		//scroll down to a portion of the page so that the scroll up animation can play
+		//when the user first enters one ofthe two scrollable sections
+		aboutContent[0].scrollTo(0, aboutContent[0].scrollHeight / 4);
+		knowledgeContent[0].scrollTo(0, knowledgeContent[0].scrollHeight / 6);
+
 		updateMainContainer();
 	}, 10);
 
@@ -118,12 +131,33 @@ function updateMainContainer() {
 	currentScreen = screens[i];
 
 	if (currentScreen.name == "projects") {
-		//remove the transition from the main container after it occurs if the current screen if the projects screen. This has to be done so that the input fields of the embeded projects do not interfere with the main container's positioning.
+		//remove the transition from the main container after it occurs if the current screen is the projects screen. This has to be done so that the input fields of the embeded projects do not interfere with the main container's positioning.
 		setTimeout(() => {
 			mainContainer.css("transition", "none");
 		}, 1000);
 	} else {
 		mainContainer.css("transition", "top 1s ease-in-out, left 1s ease-in-out");
+	}
+
+	if (currentScreen.name == "about") {
+		if (aboutContentFirstScroll) {
+			setTimeout(() => {
+				//this animation serves as a hint to the user that this section is scrollable
+				aboutContent.animate({ scrollTop: 0 }, 500);
+			}, 700);
+
+			aboutContentFirstScroll = false;
+		}
+	}
+
+	if (currentScreen.name == "knowledge") {
+		if (knowledgeContentFirstScroll) {
+			setTimeout(() => {
+				//this animation serves as a hint to the user that this section is scrollable
+				knowledgeContent.animate({ scrollTop: 0 }, 500);
+			}, 700);
+			knowledgeContentFirstScroll = false;
+		}
 	}
 
 	mainContainer.css("top", `${pos.top}vh`);
