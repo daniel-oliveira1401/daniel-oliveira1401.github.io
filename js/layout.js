@@ -12,6 +12,16 @@ $(window).on("load", () => {
 		aboutContent = $(".page-about .content");
 		knowledgeContent = $(".page-knowledge .content");
 
+		aboutContent.scroll((e) => {
+			console.log(e);
+			let scrollTopMax = e.target.scrollHeight - e.target.clientHeight;
+			let scrollPercent = e.target.scrollTop / scrollTopMax;
+			if (scrollPercent >= 0.98) {
+				console.log("bottom");
+				$("#guideFrom02To22").addClass("guide-hint");
+			}
+		});
+
 		//scroll down to a portion of the page so that the scroll up animation can play
 		//when the user first enters one ofthe two scrollable sections
 		aboutContent[0].scrollTo(0, aboutContent[0].scrollHeight / 4);
@@ -136,7 +146,12 @@ function updateMainContainer() {
 			mainContainer.css("transition", "none");
 		}, 1000);
 	} else {
-		mainContainer.css("transition", "top 1s ease-in-out, left 1s ease-in-out");
+		if (mainContainer.css("transition").includes("none")) {
+			mainContainer.css(
+				"transition",
+				"top 1s ease-in-out, left 1s ease-in-out"
+			);
+		}
 	}
 
 	if (currentScreen.name == "about") {
@@ -159,6 +174,8 @@ function updateMainContainer() {
 			knowledgeContentFirstScroll = false;
 		}
 	}
+
+	$("circle").removeClass("guide-hint");
 
 	mainContainer.css("top", `${pos.top}vh`);
 	mainContainer.css("left", `${pos.left}vw`);

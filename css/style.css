@@ -264,6 +264,34 @@ strong {
   padding: 0.2rem;
 }
 
+.guide-hint {
+  -webkit-animation-name: guide-hint;
+          animation-name: guide-hint;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes guide-hint {
+  50% {
+    fill: #E6AF2E;
+  }
+  100% {
+    fill: #ffffff;
+  }
+}
+
+@keyframes guide-hint {
+  50% {
+    fill: #E6AF2E;
+  }
+  100% {
+    fill: #ffffff;
+  }
+}
 .page-home {
   display: flex;
   flex-direction: column;
@@ -316,13 +344,13 @@ strong {
     width: unset;
   }
 }
-.page-home__cv a {
+.page-home__cv a.download {
   border: 1px solid #cdcdcd;
   padding: 0.5rem 1rem;
   font-weight: bold;
   color: inherit;
 }
-.page-home__cv a:hover, .page-home__cv a:active {
+.page-home__cv a.download:hover, .page-home__cv a.download:active {
   background-color: #cdcdcd;
   color: #222222;
 }
