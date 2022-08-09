@@ -14,6 +14,7 @@ body {
   width: 100%;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   color: #cdcdcd;
   text-align: center;
@@ -42,13 +43,12 @@ body > .skiptranslate {
   ::-webkit-scrollbar {
     background-color: #333;
   }
-
   ::-webkit-scrollbar-thumb {
     background-color: #666;
   }
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 p {
@@ -282,6 +282,7 @@ strong {
 .page-home__title {
   font-size: 2rem;
   margin-bottom: 0.25rem;
+  letter-spacing: 0.25rem;
   margin-top: 2rem;
 }
 @media (min-width: 64em) {
@@ -305,10 +306,23 @@ strong {
 }
 .page-home__cv h2 {
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.page-home__cv .img-container {
+  position: relative;
+}
+.page-home__cv .cv-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: grid;
+  place-items: center;
 }
 .page-home__cv .cv {
   margin-bottom: 0.5rem;
   width: 100%;
+  filter: blur(2px);
 }
 @media (min-width: 40em) {
   .page-home__cv .cv {
@@ -319,8 +333,9 @@ strong {
 .page-home__cv a.download {
   border: 1px solid #cdcdcd;
   padding: 0.5rem 1rem;
-  font-weight: bold;
+  font-weight: 300;
   color: inherit;
+  text-transform: capitalize;
 }
 .page-home__cv a.download:hover, .page-home__cv a.download:active {
   background-color: #cdcdcd;
@@ -518,6 +533,15 @@ strong {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  font-size: 1rem;
+}
+.page-projects .content__overlay p {
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 64em) {
+  .page-projects .content__overlay {
+    font-size: inherit;
+  }
 }
 .page-projects .content__overlay #btn-see-projects {
   padding: 0.5rem 1rem;
