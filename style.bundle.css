@@ -1,3 +1,6 @@
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./sass/style.sass ***!
+  \**********************************************************************************************************/
 * {
   padding: 0;
   margin: 0;
@@ -79,8 +82,6 @@ strong {
 }
 .content__img .img-container {
   position: relative;
-  width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
 }
 .content__img.shadow .img-container::after {
@@ -347,7 +348,7 @@ strong {
 }
 .page-home__hint .guide-icon {
   display: inline-block;
-  background-image: url("../assets/icons/guide.svg");
+  background-image: url(3c78dff399f3c8a76e81.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   width: 1rem;
@@ -550,7 +551,7 @@ strong {
   border: none;
 }
 .page-projects .content__overlay .ex-prev-arrow {
-  background-image: url("../assets/icons/nav-arrow.svg");
+  background-image: url(de5b906e44f0297d88b0.svg);
   background-size: auto 100%;
   background-repeat: no-repeat;
   width: 3ch;
@@ -560,7 +561,7 @@ strong {
   transform: translateY(35%) rotate(180deg);
 }
 .page-projects .content__overlay .ex-next-arrow {
-  background-image: url("../assets/icons/nav-arrow.svg");
+  background-image: url(de5b906e44f0297d88b0.svg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   width: 3ch;
@@ -589,7 +590,7 @@ strong {
   pointer-events: none;
 }
 .page-projects .content .navigation-container .nav-arrow {
-  background-image: url("../assets/icons/nav-arrow.svg");
+  background-image: url(de5b906e44f0297d88b0.svg);
   height: 50px;
   width: 50px;
   transition: opacity 300ms ease-in-out;
@@ -621,8 +622,6 @@ strong {
   display: none;
   background-color: #51cf81;
   color: #222222;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -631,7 +630,7 @@ strong {
 .page-contact .content .copy-icon {
   height: 1.5625rem;
   width: 1.5625rem;
-  background-image: url("../assets/icons/copy.svg");
+  background-image: url(e964dcf640f523225e12.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   display: inline-block;
@@ -647,7 +646,7 @@ strong {
 .page-contact .content .email-icon {
   height: 1.5625rem;
   width: 1.5625rem;
-  background-image: url("../assets/icons/email.svg");
+  background-image: url(2180c5079794f93e53e3.svg);
   background-size: 100%;
   display: inline-block;
 }
@@ -660,4 +659,4 @@ strong {
 .page-contact .content .email-link {
   display: grid;
   place-items: center;
-}/*# sourceMappingURL=style.css.map */
+}

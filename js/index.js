@@ -1,4 +1,16 @@
 //google translate functionality
+import "./layout";
+import "./page-home";
+import "./page-about";
+import "./page-info";
+import "./page-knowledge";
+import "./page-projects";
+import "./page-contact";
+
+import "../sass/style.sass";
+
+console.log("hello world");
+
 function googleTranslateElementInit() {
 	google.translate.TranslateElement(
 		{ pageLanguage: "pt" },
