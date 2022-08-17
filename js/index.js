@@ -9,8 +9,6 @@ import "./page-contact";
 
 import "../sass/style.sass";
 
-console.log("hello world");
-
 function googleTranslateElementInit() {
 	google.translate.TranslateElement(
 		{ pageLanguage: "pt" },

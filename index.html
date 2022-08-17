@@ -154,7 +154,7 @@
 				<div class="loading-circle"></div>
 			</div>
 		</div>
-
+		<div class="transition-overlay"></div>
 		<div id="main-container" class="">
 			<div class="top-row row">
 				<section class="page-home page">
@@ -191,8 +191,8 @@
 				</section>
 				<div class="bg-guide" style="--pos: 0">
 					<svg
-						id="first-page"
-						class="horizontal-transition transition forwards"
+						id="transitionFrom00To20"
+						class="horizontal-transition transition end"
 						version="1.1"
 						viewBox="0 0 300 50"
 						xmlns="http://www.w3.org/2000/svg"
@@ -291,7 +291,8 @@
 				</section>
 				<div class="bg-guide" style="--pos: 1">
 					<svg
-						class="horizontal-transition transition forwards"
+						class="horizontal-transition transition end"
+						id="transitionFrom20To40"
 						version="1.1"
 						viewBox="0 0 300 50"
 						xmlns="http://www.w3.org/2000/svg"
@@ -497,8 +498,9 @@
 				</section>
 				<div class="bg-guide" style="--pos: 0">
 					<svg
-						class="horizontal-transition transition"
+						class="horizontal-transition transition start"
 						version="1.1"
+						id="transitionFrom02To22"
 						viewBox="0 0 300 50"
 						xmlns="http://www.w3.org/2000/svg"
 					>
@@ -750,7 +752,7 @@
 				<div class="bg-guide" style="--pos: 1">
 					<svg
 						id="transitionFrom22To42"
-						class="horizontal-transition transition"
+						class="horizontal-transition transition start"
 						version="1.1"
 						viewBox="0 0 300 50"
 						xmlns="http://www.w3.org/2000/svg"
@@ -871,7 +873,7 @@
 				<div class="bg-guide" style="--pos: 0">
 					<svg
 						id="transitionFrom00To02"
-						class="vertical-transition transition"
+						class="vertical-transition transition start"
 						version="1.1"
 						viewBox="0 0 50 300"
 						xmlns="http://www.w3.org/2000/svg"
@@ -947,7 +949,7 @@
 				<div class="bg-guide" style="--pos: 0">
 					<svg
 						id="transitionFrom40To42"
-						class="transition vertical-transition forwards"
+						class="transition vertical-transition end"
 						version="1.1"
 						viewBox="0 0 50 300"
 						xmlns="http://www.w3.org/2000/svg"

@@ -119,6 +119,17 @@
 			padding: 0.2rem
 
 
+.transition-overlay
+	position: absolute
+	inset: 0
+	background-color: black
+	transition: opacity 200ms ease-in-out
+	z-index: 999
+	opacity: 0
+	pointer-events: none
+
+	&.active
+		opacity: 0.3
 
 		
 
