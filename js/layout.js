@@ -1,4 +1,5 @@
-//handles the svg animation and screen translation for horizontal navigation
+//handles the svg animation and screen navigation inside the app
+const TRANSITION_TIME = 1000;
 
 let aboutContent, //the .content element of the about page
 	aboutContentFirstScroll = true, //flag for the first time the about page scrolls
@@ -21,96 +22,18 @@ $(window).on("load", () => {
 	initPages();
 	initGuides();
 	applyGuidesInitialState();
+	applyContentSizes();
+	collapseAllContents();
+	initNavBar();
 	setTimeout(() => {
 		applyUrlSearchParamPage();
-	}, 1000);
+	}, TRANSITION_TIME / 2);
+	window.addEventListener("resize", () => {
+		applyContentSizes();
+	});
+	hideProjectsContent();
 	$(".loading-overlay").fadeOut();
 });
-
-let mode = "prod"; //can be "prod" or "dev"
-
-function updateMainContainer() {
-	let mainContainer = $("#main-container");
-
-	//update the currentScreen variable
-	let i = screens.findIndex((screen) => {
-		return screen.pos.left == pos.left && screen.pos.top == pos.top;
-	});
-	console.log("index", i);
-	currentScreen = screens[i];
-
-	if (currentScreen.name == "projects") {
-		//remove the transition from the main container after it occurs if the current screen is the projects screen. This has to be done so that the input fields of the embeded projects do not interfere with the main container's positioning.
-		setTimeout(() => {
-			mainContainer.css("transition", "none");
-		}, 1000);
-	} else {
-		if (mainContainer.css("transition").includes("none")) {
-			mainContainer.css(
-				"transition",
-				"top 1s ease-in-out, left 1s ease-in-out"
-			);
-		}
-	}
-
-	if (currentScreen.name == "about") {
-		if (aboutContentFirstScroll) {
-			setTimeout(() => {
-				//this animation serves as a hint to the user that this section is scrollable
-				aboutContent.animate({ scrollTop: 0 }, 500);
-			}, 700);
-
-			aboutContentFirstScroll = false;
-		}
-	}
-
-	if (currentScreen.name == "knowledge") {
-		if (knowledgeContentFirstScroll) {
-			setTimeout(() => {
-				//this animation serves as a hint to the user that this section is scrollable
-				knowledgeContent.animate({ scrollTop: 0 }, 500);
-			}, 700);
-			knowledgeContentFirstScroll = false;
-		}
-	}
-
-	mainContainer.css("top", `${pos.top}vh`);
-	mainContainer.css("left", `${pos.left}vw`);
-}
-
-/*
-
-Goal: Allow user to navigate the page via url. Example:
-
-Clicking in the link https://daniel-oliveira1401.github.io#projects or https://daniel-oliveira1401.github.io?page=projects  would take me directly to the projects page.
-
-What is needed to achieve that:
-
-- being able to activate the guides programatically
-
-- each page should be aware of its guides
-
-- the program has to know which guides it should activate for a given page
-
-There will be 2 classes: Page and Guide. Each Page object will have a certain number of Guides.
-
-Idea: create a sort of lookup table where each page stores the position that its guides need to be
-
-Each Page object has their guideData objects. Each guideData object contains a Guide object, and a string which says what is the position of the guide that corresponds to it being in the page. This string can either be forward or backward. When creating the pages, we just need to look at the guides and then create this lookup table of directions for each page.
-
-Each Guide will have a move() function which takes as parameter the direction, which can be "forward" or "backward".
-
-Each Page will have a focus() function which will call move(direction) for every one of its Guides, which will cause every guide to move to that page, if it isn't already there.
-
-Each page will also have a navigateTo(Page) function which will be used to navigate to the next/previous page. The goal of this function is to ensure that the next page that the user will visit will have all of its Guides in the right position. (focused). So, what this function will do is basically call the focus() method of the page object passed to it, and also set the body position of the page to move the "camera".
-
-This navigateTo(Page) function has to be called when a guide is clicked.
-
-When a guide is clicked, it has to call nagivateTo(Page) and pass the right page to the function. 
-
-the page.focus() function will loop through the guides array and move the guides that have that page in them. Let's say we want to go to the home page. The home page has 2 guides associated with it. So we need to move those guides to the position (start or end) that corresponds to the home page. For that we can pass to the guide.move() function the page, and then the guide will check which end of itself is connected to that page, and move accordingly
-
-*/
 
 let guides = []; //initialized in initGuides()
 let pages = []; //initialized in initPages()
@@ -144,10 +67,10 @@ function initGuides() {
 			if (guideElement.classList.contains("start")) {
 				//navigate to the page corresponding to guide.endPage
 				let page = pages.find((page) => page.name == guide.endPage);
-				navigateTo(page);
+				navigateTo(page, true);
 			} else if (guideElement.classList.contains("end")) {
 				let page = pages.find((page) => page.name == guide.startPage);
-				navigateTo(page);
+				navigateTo(page, true);
 			}
 		});
 	});
@@ -278,6 +201,33 @@ function initPages() {
 	];
 }
 
+function initNavBar() {
+	//click listener for the hamburguer icon
+	$(".nav__hamburguer").click(() => {
+		toggleNavbar();
+	});
+
+	//click listener for the backdrop
+	$(".nav__backdrop").click(() => {
+		toggleNavbar();
+	});
+
+	$(".nav .nav__option").click((e) => {
+		let page = $(e.currentTarget).attr("data-page");
+		toggleNavbar();
+		setTimeout(() => {
+			navigateTo(
+				pages.find((pg) => pg.name == page),
+				true
+			);
+		}, 400);
+	});
+}
+
+function toggleNavbar() {
+	$(".nav").toggleClass("expanded");
+}
+
 function Guide(domElement, startPage, endPage) {
 	return {
 		domElement,
@@ -345,32 +295,53 @@ function Page(name, guidesData, pos, domElement) {
 			mainContainer.css("top", `${this.pos.y}vh`);
 			mainContainer.css("left", `${this.pos.x}vw`);
 
-			$(".transition-overlay").addClass("active");
-
-			setTimeout(() => {
-				$(".transition-overlay").removeClass("active");
-			}, 1000);
 			//special cases
 			if (scrollable) {
 				setTimeout(() => {
 					//this animation serves as a hint to the user that this section is scrollable
 
-					$(domElement).animate({ scrollTop: 0 }, 500);
-				}, 700);
+					$(domElement).animate({ scrollTop: 0 }, TRANSITION_TIME / 2);
+				}, TRANSITION_TIME * 0.7);
 			}
+		},
+		collapse() {
+			let selector = `.page-${this.name} .content__body`;
+			document.querySelector(selector)?.classList.add("collapsed");
+		},
+		expand() {
+			let selector = `.page-${this.name} .content__body`;
+			document.querySelector(selector)?.classList.remove("collapsed");
 		}
 	};
 }
 
-/*
+function updateURLSearchParameter(pageName) {
+	let stringParams = window.location.search;
+	let params = new URLSearchParams(stringParams);
+	params.set("page", pageName);
 
-goal: when a guide is clicked it should know which page to focus on
+	let url = window.location + "";
 
-How to achieve that: add a listener to all guides. This listener will then grab the svg dom element from the event and search which guide that element belongs to. Then, the function will check the current position of the guide, and if it is at the end, then it will focus on guide.startPage. If the guide is at the start, it will focus on guide.endPage
+	//remove the current search params
+	url = url.replace(`${window.location.search}`, "");
 
-*/
+	//add the new ones
+	url = url + "?" + params.toString();
 
-function navigateTo(page) {
+	window.history.replaceState({}, document.title, url);
+}
+
+function hideProjectsContent() {
+	$(".page-projects .content").fadeOut();
+}
+
+function showProjectsContent() {
+	$(".page-projects .content").fadeIn();
+}
+
+function navigateTo(page, updateParam = false) {
+	//collapse the pages, then do eveything else
+
 	let scrollable = false;
 	if (page.name == "about") {
 		scrollable = aboutContentFirstScroll;
@@ -382,7 +353,21 @@ function navigateTo(page) {
 		knowledgeContentFirstScroll = false;
 	}
 
+	if (page.name == "projects") {
+		setTimeout(() => {
+			showProjectsContent();
+		}, TRANSITION_TIME);
+	} else {
+		setTimeout(() => {
+			hideProjectsContent();
+		}, TRANSITION_TIME);
+	}
+
 	page.focus(scrollable);
+	setTimeout(() => {
+		page.expand();
+		collapseAllContents(page.name);
+	}, TRANSITION_TIME);
 
 	let pageGuides = guides.filter((guide) => {
 		return guide.startPage == page.name || guide.endPage == page.name;
@@ -391,28 +376,24 @@ function navigateTo(page) {
 	pageGuides.forEach((pageGuide) => {
 		pageGuide.move(page.name);
 	});
+	if (updateParam) {
+		updateURLSearchParameter(page.name);
+	}
 }
 
-// setTimeout(() => {
-// 	navigateTo(pages.find((page) => page.name == "home"));
-// }, 2000);
+function applyContentSizes() {
+	let contentBodies = document.querySelectorAll(".content__body");
 
-// setTimeout(() => {
-// 	navigateTo(pages.find((page) => page.name == "knowledge"));
-// }, 4000);
+	contentBodies.forEach((contentBody) => {
+		contentBody.style.height = `${contentBody.scrollHeight}px`;
+		contentBody.style.minHeight = `${contentBody.scrollHeight}px`;
+	});
+}
 
-// setTimeout(() => {
-// 	navigateTo(pages.find((page) => page.name == "info"));
-// }, 6000);
-
-// setTimeout(() => {
-// 	navigateTo(pages.find((page) => page.name == "projects"));
-// }, 8000);
-
-// setTimeout(() => {
-// 	navigateTo(pages.find((page) => page.name == "about"));
-// }, 10000);
-
-// setTimeout(() => {
-// 	navigateTo(pages.find((page) => page.name == "contact"));
-// }, 12000);
+function collapseAllContents(exception) {
+	pages.forEach((page) => {
+		if (page.name != exception) {
+			page.collapse();
+		}
+	});
+}

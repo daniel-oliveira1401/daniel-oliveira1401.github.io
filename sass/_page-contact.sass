@@ -11,9 +11,12 @@
 			margin-bottom: 0
 			margin-bottom: 1.5rem
 			.email-row
-				display: flex
-				align-items: center
-				justify-content: center
+				display: grid
+				grid-template-columns: 1fr 1fr
+				grid-template-rows: 1fr 1fr
+
+				> *
+					margin-inline: auto
 				
 
 			.email-feedback
@@ -34,12 +37,14 @@
 			display: inline-block
 			cursor: pointer
 
+
 		#email-field
-			max-width: 60%
+			
 			overflow: hidden
 			text-overflow: ellipsis
 			margin-right: 1rem
 			margin-left: 1rem
+			grid-column: span 2
 
 		.email-icon
 			height: 1.5625rem //25px

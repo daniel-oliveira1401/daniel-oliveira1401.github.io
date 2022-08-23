@@ -57,14 +57,25 @@ strong
 	font-weight: bold
 
 .content
-	
+	$shadow-blur: 10px
+	$tag-shadow: 0px 0px $shadow-blur currentColor, 0px 0px $shadow-blur currentColor
 	&__header
 		font-size: $font-lg
 		margin-bottom: 3rem
-		color: $goldenRod
+		color: $white
+		text-shadow: $tag-shadow !important
 		.symbols
 			color: $celadonBlue
+			text-shadow: $tag-shadow !important
 	
+	&__body
+		transition: height 1000ms ease-in, min-height 1000ms ease-in
+		overflow: hidden
+		
+		&.collapsed
+			height: 0px !important
+			min-height: 0px !important
+
 	&__img
 		display: grid
 		place-items: center
@@ -103,9 +114,11 @@ strong
 		font-size: $font-lg
 		margin-bottom: 3.5rem
 		margin-top: 3rem
-		color: $goldenRod
+		color: $white
+		text-shadow: $tag-shadow !important
 		.symbols
 			color: $celadonBlue
+			text-shadow: $tag-shadow !important
 
 //helper classes
 

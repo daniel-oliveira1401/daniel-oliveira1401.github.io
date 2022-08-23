@@ -154,7 +154,47 @@
 				<div class="loading-circle"></div>
 			</div>
 		</div>
-		<div class="transition-overlay"></div>
+		<div class="nav">
+			<div class="nav__container">
+				<div class="nav__hamburguer">
+					<span></span><span></span><span></span>
+				</div>
+				<ul class="nav__options">
+					<li data-page="home" class="nav__option">
+						<span class="nav__option-icon"></span
+						><span class="symbols">&lt;</span> Home
+						<span class="symbols">/&gt;</span>
+					</li>
+					<li data-page="about" class="nav__option">
+						<span class="nav__option-icon"></span
+						><span class="symbols">&lt;</span> Sobre
+						<span class="symbols">/&gt;</span>
+					</li>
+					<li data-page="knowledge" class="nav__option">
+						<span class="nav__option-icon"></span
+						><span class="symbols">&lt;</span> Conhecimentos
+						<span class="symbols">/&gt;</span>
+					</li>
+					<li data-page="projects" class="nav__option">
+						<span class="nav__option-icon"></span
+						><span class="symbols">&lt;</span> Projetos
+						<span class="symbols">/&gt;</span>
+					</li>
+					<li data-page="contact" class="nav__option">
+						<span class="nav__option-icon"></span
+						><span class="symbols">&lt;</span> Contacto
+						<span class="symbols">/&gt;</span>
+					</li>
+					<li data-page="info" class="nav__option">
+						<span class="nav__option-icon"></span
+						><span class="symbols">&lt;</span> Info
+						<span class="symbols">/&gt;</span>
+					</li>
+				</ul>
+			</div>
+			<div class="nav__backdrop"></div>
+		</div>
+
 		<div id="main-container" class="">
 			<div class="top-row row">
 				<section class="page-home page">
@@ -165,8 +205,8 @@
 								Desenvolvedor Frontend apaixonado por aprender!
 							</h2>
 						</header>
+						<h2 class="page-home__cv-title">Meu currículo</h2>
 						<div class="page-home__cv">
-							<h2>Meu currículo</h2>
 							<div class="img-container">
 								<img
 									class="cv"
@@ -270,17 +310,19 @@
 								>&gt;</span
 							>
 						</h2>
-						<p>Este Portfólio foi feito por mim com muito amor :)</p>
-						<p>Este Portfólio está hospedado no Github Pages.</p>
+						<div class="content__body">
+							<p>Este Portfólio foi feito por mim com muito amor :)</p>
+							<p>Este Portfólio está hospedado no Github Pages.</p>
 
-						<p>
-							Icones das tecnologias da seção de "Conhecimentos" retirados de
-							<a
-								href="https://github.com/devicons/devicon/tree/master/icons"
-								target="_blank"
-								>devicon</a
-							>.
-						</p>
+							<p>
+								Icones das tecnologias da seção de "Conhecimentos" retirados de
+								<a
+									href="https://github.com/devicons/devicon/tree/master/icons"
+									target="_blank"
+									>devicon</a
+								>.
+							</p>
+						</div>
 
 						<div class="content__footer">
 							<span class="symbols">&lt;/</span>info<span class="symbols"
@@ -370,31 +412,34 @@
 								>&gt;</span
 							>
 						</h2>
-						<p>Quer entrar em contato comigo?</p>
-						<p>Me mande um e-mail ;)</p>
-						<div class="contact-field">
-							<div class="email-row">
-								<span id="copy-email" class="copy-icon"></span>
-								<span id="email-field">daniel.oliveira1401@outlook.com</span>
-								<a
-									class="email-link"
-									href="https://outlook.live.com/mail/0/deeplink/compose?to=daniel.oliveira1401@outlook.com"
-									target="_blank"
-								>
-									<span class="email-icon"></span>
-								</a>
+						<div class="content__body">
+							<p>Quer entrar em contato comigo?</p>
+							<p>Me mande um e-mail ;)</p>
+							<div class="contact-field">
+								<div class="email-row">
+									<span id="email-field">daniel.oliveira1401@outlook.com</span>
+									<span id="copy-email" class="copy-icon"></span>
+									<a
+										class="email-link"
+										href="https://outlook.live.com/mail/0/deeplink/compose?to=daniel.oliveira1401@outlook.com"
+										target="_blank"
+									>
+										<span class="email-icon"></span>
+									</a>
+								</div>
+								<div class="email-feedback">Email copiado!</div>
 							</div>
-							<div class="email-feedback">Email copiado!</div>
+							<p>ou me envie uma mensagem no LinkedIn</p>
+							<p class="contact-field">
+								<a
+									class="linkedin-link"
+									href="https://www.linkedin.com/in/daniel-oliveira-807654234"
+									target="_blank"
+									>Daniel Oliveira</a
+								>
+							</p>
 						</div>
-						<p>ou me envie uma mensagem no LinkedIn</p>
-						<p class="contact-field">
-							<a
-								class="linkedin-link"
-								href="https://www.linkedin.com/in/daniel-oliveira-807654234"
-								target="_blank"
-								>Daniel Oliveira</a
-							>
-						</p>
+
 						<div class="content__footer">
 							<span class="symbols">&lt;/</span>contato<span class="symbols"
 								>&gt;</span
@@ -411,84 +456,86 @@
 								>&gt;</span
 							>
 						</h2>
-						<p class="page-about__greetings">Oi,</p>
-						<p>meu nome é Daniel, tenho 19 anos e moro no Brasil 🙂</p>
-						<div class="content-row">
-							<p>
-								Coloquei meu pé no mundo da tecnologia pela primeira vez no
-								curso de Técnico em Eletrônica que comecei na ETEC em 2019.
-							</p>
-							<div class="content__img">
-								<h4>Instrumentação</h4>
-								<div class="img-container">
-									<img
-										class="rounded-3"
-										src="./assets/images/instrumentos-eletronica.jpg"
-										alt="image"
-									/>
+						<div class="content__body">
+							<p class="page-about__greetings">Oi,</p>
+							<p>meu nome é Daniel, tenho 19 anos e moro no Brasil 🙂</p>
+							<div class="content-row">
+								<p>
+									Coloquei meu pé no mundo da tecnologia pela primeira vez no
+									curso de Técnico em Eletrônica que comecei na ETEC em 2019.
+								</p>
+								<div class="content__img">
+									<h4>Instrumentação</h4>
+									<div class="img-container">
+										<img
+											class="rounded-3"
+											src="./assets/images/instrumentos-eletronica.jpg"
+											alt="image"
+										/>
+									</div>
+									<figcaption>Medição de ondas senoidais.</figcaption>
 								</div>
-								<figcaption>Medição de ondas senoidais.</figcaption>
 							</div>
-						</div>
 
-						<div class="content-row">
+							<div class="content-row">
+								<p>
+									No segundo semestre do curso, decidi que queria me aprofundar
+									mais em robótica, e por isso, entrei no curso de Técnico em
+									Mecatrônica no SENAI.
+								</p>
+								<div class="content__img">
+									<h4>Braço manipulador - Vista Lateral</h4>
+									<div class="img-container">
+										<img
+											class="rounded-3"
+											src="./assets/images/robot.jpeg"
+											alt=""
+										/>
+									</div>
+									<figcaption>
+										Nosso Trabalho de Conclusão de Curso do SENAI.
+									</figcaption>
+								</div>
+							</div>
+							<div class="content-row">
+								<p>
+									No terceiro semestre do curso de Técnico em Eletrônica na ETEC
+									tive meu primeiro contato com programação (programação de
+									microcontroladores).
+								</p>
+								<div class="content__img">
+									<h4>Meu primeiro braço robótico.</h4>
+									<div class="img-container">
+										<video
+											class="rounded-3"
+											src="./assets/videos/robot-arm.mp4"
+											controls
+											muted
+											autoplay
+										></video>
+									</div>
+									<figcaption>
+										Plataforma Arduino usada para o controle.
+									</figcaption>
+								</div>
+							</div>
+
 							<p>
-								No segundo semestre do curso, decidi que queria me aprofundar
-								mais em robótica, e por isso, entrei no curso de Técnico em
+								A partir desse momento, foi amor à primeira vista e me apaixonei
+								por programar!
+							</p>
+							<p>
+								Então, no final de 2020 acabei o curso de Técnico em Eletrônica
+								na ETEC e no final de 2021 acabei o curso de Técnico em
 								Mecatrônica no SENAI.
 							</p>
-							<div class="content__img">
-								<h4>Braço manipulador - Vista Lateral</h4>
-								<div class="img-container">
-									<img
-										class="rounded-3"
-										src="./assets/images/robot.jpeg"
-										alt=""
-									/>
-								</div>
-								<figcaption>
-									Nosso Trabalho de Conclusão de Curso do SENAI.
-								</figcaption>
-							</div>
-						</div>
-						<div class="content-row">
 							<p>
-								No terceiro semestre do curso de Técnico em Eletrônica na ETEC
-								tive meu primeiro contato com programação (programação de
-								microcontroladores).
+								Agora estou cursando a faculdade de Análise e Desenvolvimento de
+								Sistemas na Descomplica Faculdade Digital e pretendo seguir a
+								carreira de Desenvolvedor Web para que eu possa trabalhar com o
+								que amo: programação :)
 							</p>
-							<div class="content__img">
-								<h4>Meu primeiro braço robótico.</h4>
-								<div class="img-container">
-									<video
-										class="rounded-3"
-										src="./assets/videos/robot-arm.mp4"
-										controls
-										muted
-										autoplay
-									></video>
-								</div>
-								<figcaption>
-									Plataforma Arduino usada para o controle.
-								</figcaption>
-							</div>
 						</div>
-
-						<p>
-							A partir desse momento, foi amor à primeira vista e me apaixonei
-							por programar!
-						</p>
-						<p>
-							Então, no final de 2020 acabei o curso de Técnico em Eletrônica na
-							ETEC e no final de 2021 acabei o curso de Técnico em Mecatrônica
-							no SENAI.
-						</p>
-						<p>
-							Agora estou cursando a faculdade de Análise e Desenvolvimento de
-							Sistemas na Descomplica Faculdade Digital e pretendo seguir a
-							carreira de Desenvolvedor Web para que eu possa trabalhar com o
-							que amo: programação :)
-						</p>
 						<div class="content__footer">
 							<span class="symbols">&lt;/</span>sobre<span class="symbols"
 								>&gt;</span
@@ -578,169 +625,173 @@
 								>&gt;</span
 							>
 						</h2>
-						<p class="mb">
-							Comecei a programar com a linguagem <strong>C++</strong> para
-							microcontroladores no ambiente de desenvolvimento Arduino. Depois,
-							aprendi <strong>assembly</strong> para microcontroladores PIC.
-						</p>
-						<div class="content-row mb">
-							<p>
-								Em seguida, iniciei minha jornada de programação de computadores
-								e aprendi <strong>Java</strong>. O meu intuito de aprender Java
-								era criar um aplicativo mobile que permitisse controlar nosso
-								Trabalho de Conclusão de Curso de Eletrônica via Bluetooth
-								usando o ambiente de desenvolvimento
-								<strong>Android Studio</strong>. O resultado foi que consegui e
-								tiramos nota 100 no Trabalho de Conclusão de Curso 🎉
+						<div class="content__body">
+							<p class="mb">
+								Comecei a programar com a linguagem <strong>C++</strong> para
+								microcontroladores no ambiente de desenvolvimento Arduino.
+								Depois, aprendi <strong>assembly</strong> para
+								microcontroladores PIC.
 							</p>
-							<div class="content__img">
-								<h4>Java</h4>
-								<div class="img-container bg-light p-1 rounded-3">
-									<img
-										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg"
-										alt="Java trademark"
-									/>
+							<div class="content-row mb">
+								<p>
+									Em seguida, iniciei minha jornada de programação de
+									computadores e aprendi <strong>Java</strong>. O meu intuito de
+									aprender Java era criar um aplicativo mobile que permitisse
+									controlar nosso Trabalho de Conclusão de Curso de Eletrônica
+									via Bluetooth usando o ambiente de desenvolvimento
+									<strong>Android Studio</strong>. O resultado foi que consegui
+									e tiramos nota 100 no Trabalho de Conclusão de Curso 🎉
+								</p>
+								<div class="content__img">
+									<h4>Java</h4>
+									<div class="img-container bg-light p-1 rounded-3">
+										<img
+											src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg"
+											alt="Java trademark"
+										/>
+									</div>
+									<figcaption>
+										Uma das linguages de programação mais famosas.
+									</figcaption>
 								</div>
-								<figcaption>
-									Uma das linguages de programação mais famosas.
-								</figcaption>
 							</div>
-						</div>
-						<p class="mb">
-							Depois de me aventurar em <strong>Java</strong>, comecei a
-							aprender tecnologias relacionadas à <strong>Web</strong>. Fiz um
-							<a
-								href="https://www.coursera.org/learn/html-css-javascript-for-web-developers"
-								>curso na Coursera</a
-							>
-							oferecido pela <strong>Johns Hopkins University</strong> sobre
-							<strong>HTML</strong>, <strong>CSS</strong> e
-							<strong>JavaScript</strong>. Nesse curso foi apresentado toda a
-							fundação necessária para construir landing pages e sites simples.
-						</p>
-						<div class="content-row reverse mb">
-							<p>
-								Com essa base, decidi me aprofundar mais na área de Frontend e
-								comecei a estudar <strong>React</strong>. No começo foi bem
-								confuso para mim entender os conceitos relacionados a essa
-								biblioteca, e o que estava acontecendo por trás de toda aquela
-								mágica que me possibilitava misturar linguagens diferentes para
-								no final gerar uma aplicação.
+							<p class="mb">
+								Depois de me aventurar em <strong>Java</strong>, comecei a
+								aprender tecnologias relacionadas à <strong>Web</strong>. Fiz um
+								<a
+									href="https://www.coursera.org/learn/html-css-javascript-for-web-developers"
+									>curso na Coursera</a
+								>
+								oferecido pela <strong>Johns Hopkins University</strong> sobre
+								<strong>HTML</strong>, <strong>CSS</strong> e
+								<strong>JavaScript</strong>. Nesse curso foi apresentado toda a
+								fundação necessária para construir landing pages e sites
+								simples.
 							</p>
-							<div class="content__img">
-								<h4>Reactjs</h4>
-								<div class="img-container bg-light rounded-3 p-1">
-									<img
-										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-										alt="ReactJs trademark"
-									/>
+							<div class="content-row reverse mb">
+								<p>
+									Com essa base, decidi me aprofundar mais na área de Frontend e
+									comecei a estudar <strong>React</strong>. No começo foi bem
+									confuso para mim entender os conceitos relacionados a essa
+									biblioteca, e o que estava acontecendo por trás de toda aquela
+									mágica que me possibilitava misturar linguagens diferentes
+									para no final gerar uma aplicação.
+								</p>
+								<div class="content__img">
+									<h4>Reactjs</h4>
+									<div class="img-container bg-light rounded-3 p-1">
+										<img
+											src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+											alt="ReactJs trademark"
+										/>
+									</div>
+									<figcaption>
+										Framework Frontend baseado em componentes
+									</figcaption>
 								</div>
-								<figcaption>
-									Framework Frontend baseado em componentes
-								</figcaption>
 							</div>
-						</div>
-						<div class="content-row mb">
+							<div class="content-row mb">
+								<p>
+									Com essa dificuldade me impedindo de progredir, decidi voltar
+									um passo e entender primeiro como a Web funciona. Foi então
+									que aprendi sobre o protocolo <strong>HTTP</strong>, como
+									acontece a comunicação do Frontend com o Backend, e o que era
+									na verdade o Backend. Aprendi o básico sobre
+									<strong> APIs RESTful</strong> com <strong>Nodejs</strong> e
+									<strong>Express</strong>.
+								</p>
+								<div class="content__img">
+									<h4>Nodejs</h4>
+									<div class="img-container">
+										<img
+											class="rounded-3 bg-light"
+											src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+											alt="Nodejs trademark"
+										/>
+									</div>
+									<figcaption>Tecnologia Backend</figcaption>
+								</div>
+							</div>
 							<p>
-								Com essa dificuldade me impedindo de progredir, decidi voltar um
-								passo e entender primeiro como a Web funciona. Foi então que
-								aprendi sobre o protocolo <strong>HTTP</strong>, como acontece a
-								comunicação do Frontend com o Backend, e o que era na verdade o
-								Backend. Aprendi o básico sobre
-								<strong> APIs RESTful</strong> com <strong>Nodejs</strong> e
-								<strong>Express</strong>.
+								Agora que essa parte de comunicação já foi compreendida, parti
+								para aprender <strong>Webpack</strong>, já que tinha descoberto
+								que ele que era o responsável por aquela magia que eu tinha
+								presenciado quando utilizando React.
 							</p>
-							<div class="content__img">
-								<h4>Nodejs</h4>
-								<div class="img-container">
-									<img
-										class="rounded-3 bg-light"
-										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-										alt="Nodejs trademark"
-									/>
+							<div class="content-row reverse mb">
+								<p>
+									Depois de aprender como Webpack funciona, e como utilizar essa
+									tecnologia para criar bundles, modularizar melhor um projeto e
+									integrar tecnologias do Frontend de forma simples, o que antes
+									eu achava que era magia, agora eu tenho certeza que é :) A
+									magia Webpack 🌟
+								</p>
+								<div class="content__img">
+									<h4>Webpack</h4>
+									<div class="img-container">
+										<img
+											class="bg-light rounded-3"
+											src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original-wordmark.svg"
+											alt="Webpack trademark"
+										/>
+									</div>
+									<figcaption>Bundler para tecnologias Web</figcaption>
 								</div>
-								<figcaption>Tecnologia Backend</figcaption>
 							</div>
-						</div>
-						<p>
-							Agora que essa parte de comunicação já foi compreendida, parti
-							para aprender <strong>Webpack</strong>, já que tinha descoberto
-							que ele que era o responsável por aquela magia que eu tinha
-							presenciado quando utilizando React.
-						</p>
-						<div class="content-row reverse mb">
-							<p>
-								Depois de aprender como Webpack funciona, e como utilizar essa
-								tecnologia para criar bundles, modularizar melhor um projeto e
-								integrar tecnologias do Frontend de forma simples, o que antes
-								eu achava que era magia, agora eu tenho certeza que é :) A magia
-								Webpack 🌟
-							</p>
-							<div class="content__img">
-								<h4>Webpack</h4>
-								<div class="img-container">
-									<img
-										class="bg-light rounded-3"
-										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original-wordmark.svg"
-										alt="Webpack trademark"
-									/>
+							<div class="content-row mb">
+								<p>
+									Nesse ponto, eu já estava fazendo projetos para testar meus
+									conhecimentos e treinar o que sabia, mas ainda estava sentindo
+									falta de uma maneira de controlar as versões dos meus projetos
+									e poder experimentar mudanças sem ter que comprometer toda a
+									estrutura do projeto. Foi então que conheci o
+									<strong>Software de Controle de Versão Git</strong> e como ele
+									pode ser integrado com o <strong>Github</strong>.
+								</p>
+								<div class="content__img">
+									<h4>Git</h4>
+									<div class="img-container bg-light rounded-3">
+										<img
+											src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original-wordmark.svg"
+											alt="Git trademark"
+										/>
+									</div>
+									<figcaption>Software de Controle de Versão (VCS)</figcaption>
 								</div>
-								<figcaption>Bundler para tecnologias Web</figcaption>
 							</div>
-						</div>
-						<div class="content-row mb">
-							<p>
-								Nesse ponto, eu já estava fazendo projetos para testar meus
-								conhecimentos e treinar o que sabia, mas ainda estava sentindo
-								falta de uma maneira de controlar as versões dos meus projetos e
-								poder experimentar mudanças sem ter que comprometer toda a
-								estrutura do projeto. Foi então que conheci o
-								<strong>Software de Controle de Versão Git</strong> e como ele
-								pode ser integrado com o <strong>Github</strong>.
-							</p>
-							<div class="content__img">
-								<h4>Git</h4>
-								<div class="img-container bg-light rounded-3">
-									<img
-										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original-wordmark.svg"
-										alt="Git trademark"
-									/>
+							<div class="content-row reverse mb">
+								<p>
+									Por fim, estudei <strong>Bootstrap</strong> e
+									<strong>SASS</strong> para melhorar minhas capacidades de
+									criação de layouts mais complexos para Web, e também
+									estruturar de forma mais organizada os projetos.
+								</p>
+								<div class="content__img">
+									<h4>Bootstrap</h4>
+									<div class="img-container bg-light rounded-3 p-1">
+										<img
+											src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original-wordmark.svg"
+											alt="Bootstrap trademark"
+										/>
+									</div>
+									<figcaption>
+										Biblioteca Frontend para layouts responsivos e muito mais.
+									</figcaption>
 								</div>
-								<figcaption>Software de Controle de Versão (VCS)</figcaption>
 							</div>
-						</div>
-						<div class="content-row reverse mb">
-							<p>
-								Por fim, estudei <strong>Bootstrap</strong> e
-								<strong>SASS</strong> para melhorar minhas capacidades de
-								criação de layouts mais complexos para Web, e também estruturar
-								de forma mais organizada os projetos.
-							</p>
-							<div class="content__img">
-								<h4>Bootstrap</h4>
-								<div class="img-container bg-light rounded-3 p-1">
-									<img
-										src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original-wordmark.svg"
-										alt="Bootstrap trademark"
-									/>
-								</div>
-								<figcaption>
-									Biblioteca Frontend para layouts responsivos e muito mais.
-								</figcaption>
-							</div>
-						</div>
 
-						<p class="mb">
-							Atualmente estou focado em <strong>aprender</strong> os conteúdos
-							novos que a faculdade está me apresentando, e também
-							<strong>aplicar</strong> todo o conhecimento que adquiri até agora
-							sobre como desenvolvimento web funciona.
-						</p>
-						<p class="mb">
-							Acredito que se continuar estudando e praticando muito, vou
-							conseguir chegar no meu objetivo de se tornar um
-							<strong>Desenvolvedor Full Stack</strong>.
-						</p>
+							<p class="mb">
+								Atualmente estou focado em <strong>aprender</strong> os
+								conteúdos novos que a faculdade está me apresentando, e também
+								<strong>aplicar</strong> todo o conhecimento que adquiri até
+								agora sobre como desenvolvimento web funciona.
+							</p>
+							<p class="mb">
+								Acredito que se continuar estudando e praticando muito, vou
+								conseguir chegar no meu objetivo de se tornar um
+								<strong>Desenvolvedor Full Stack</strong>.
+							</p>
+						</div>
 						<div class="content__footer">
 							<span class="symbols">&lt;/</span>conhecimentos<span
 								class="symbols"
@@ -831,20 +882,22 @@
 									>&gt;</span
 								>
 							</h2>
-							<p>Esses são alguns dos projetos que já fiz até agora.</p>
-							<p>
-								Sempre que termino um projeto novo, eu adiciono um preview dele
-								aqui ;)
-							</p>
-							<p>
-								Use as setas <span class="ex-prev-arrow"></span> e
-								<span class="ex-next-arrow"></span> que estão presentes no topo
-								da página para navegar entre os projetos :D
-							</p>
-							<p>
-								Ah, e eles são interativos também, tente apertar os botões ;)
-							</p>
-							<button id="btn-see-projects">Entendi :)</button>
+							<div class="content__body">
+								<p>Esses são alguns dos projetos que já fiz até agora.</p>
+								<p>
+									Sempre que termino um projeto novo, eu adiciono um preview
+									dele aqui ;)
+								</p>
+								<p>
+									Use as setas <span class="ex-prev-arrow"></span> e
+									<span class="ex-next-arrow"></span> que estão presentes no
+									topo da página para navegar entre os projetos :D
+								</p>
+								<p>
+									Ah, e eles são interativos também, tente apertar os botões ;)
+								</p>
+								<button id="btn-see-projects">Entendi :)</button>
+							</div>
 							<div class="content__footer">
 								<span class="symbols">&lt;/</span>projetos<span class="symbols"
 									>&gt;</span
