@@ -2,6 +2,8 @@
 	display: flex
 	flex-direction: column
 	align-items: center
+	$shadow-blur: 3px
+	$tag-shadow: 0px 0px $shadow-blur currentColor, 0px 0px $shadow-blur currentColor
 	.content
 		display: flex
 		flex-direction: column
@@ -16,6 +18,7 @@
 		margin-bottom: 0.25rem
 		letter-spacing: 0.25rem
 		color: $white
+		text-shadow: $tag-shadow !important
 		@include breakpoint-up(large)
 			margin-bottom: 0.1rem
 		margin-top: 3rem

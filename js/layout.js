@@ -62,7 +62,6 @@ function initGuides() {
 	guides.forEach((guide) => {
 		$(`#${guide.domElement.id} circle`).click((e) => {
 			let guideElement = e.currentTarget.ownerSVGElement;
-			console.log("clicked");
 			//if the guide is at the start
 			if (guideElement.classList.contains("start")) {
 				//navigate to the page corresponding to guide.endPage

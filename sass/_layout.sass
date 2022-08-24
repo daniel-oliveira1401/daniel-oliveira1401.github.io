@@ -12,6 +12,71 @@
 	top: -100vh
 	transform: scale(0.15)
 
+.content
+	$shadow-blur: 5px
+	$tag-shadow: 0px 0px $shadow-blur currentColor, 0px 0px $shadow-blur currentColor
+	&__header
+		font-size: $font-lg
+		margin-bottom: 3rem
+		color: $white
+		text-shadow: $tag-shadow !important
+		.symbols
+			color: $celadonBlue
+			text-shadow: $tag-shadow !important
+	
+	&__body
+		transition: height 1000ms ease-in, min-height 1000ms ease-in
+		overflow: hidden
+		
+		&.collapsed
+			height: 0px !important
+			min-height: 0px !important
+
+	&__img
+		display: grid
+		place-items: center
+		padding: 0.3125rem
+		margin-bottom: 1.5rem
+
+		.img-container 
+			position: relative
+			width: min-content
+
+		&.shadow
+		
+			.img-container::after 
+				pointer-events: none
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				box-shadow: inset 0px 0px 20px 20px $eerieBlack
+		
+
+		h4, figcaption
+			font-size: $font-xs
+			@include breakpoint-up(large)
+				font-size: $font-md
+			margin-top: 1rem
+			margin-bottom: 1rem
+
+			a
+				color: yellow
+				text-decoration: underline
+		
+	&__footer
+		font-size: $font-lg
+		margin-bottom: 3.5rem
+		margin-top: 3rem
+		color: $white
+		text-shadow: $tag-shadow !important
+		.symbols
+			color: $celadonBlue
+			text-shadow: $tag-shadow !important
+
+
 .row
 	position: absolute
 	left: 0
@@ -162,6 +227,15 @@
 			width: 100%
 			background-color: $eerieBlack
 
+			.bar1
+				transform: translateY(10px) rotate(45deg)
+
+			.bar2
+				opacity: 0
+
+			.bar3
+				transform: translateY(-10px) rotate(-45deg)
+
 		.nav__backdrop
 			width: 100% - $nav-width
 			height: 100%
@@ -180,7 +254,6 @@
 		transition: all $nav-transition ease-in-out
 		color: inherit
 		width: 100%
-
 		background-color: $eerieBlack
 		display: flex	
 		flex-direction: column
@@ -228,14 +301,18 @@
 
 	&__hamburguer
 		transition: all calc( $nav-transition * 1.2 ) ease-in-out
-		padding-top: 8px
-		padding-left: 8px
+		cursor: pointer
+		$padding-sm: 8px
+		$padding-lg: 32px
+		$hamburguer-width: 32px
+		padding-top: $padding-sm
+		padding-left: $padding-sm
 		@include breakpoint-up(medium)
-			top: 32px
-			left: 32px
-			width: calc(32px + 32px)
-			height: calc( 32px + 32px )
-		width: calc(32px + 8px)
+			top: $padding-lg
+			left: $padding-lg
+			width: calc($hamburguer-width + $padding-lg)
+			height: calc( $hamburguer-width + $padding-lg )
+		width: calc($hamburguer-width + $padding-sm)
 		display: flex
 		flex-direction: column
 		align-items: center
@@ -244,8 +321,10 @@
 			display: block
 			background-color: $white
 			height: 2px
-			width: 32px
+			width: $hamburguer-width
 			margin-bottom: 8px
+			transition: all calc( $nav-transition * 1.2 ) ease-in-out
+
 		
 	&__container
 		transition: all $nav-transition ease-in-out
