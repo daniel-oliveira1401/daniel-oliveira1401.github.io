@@ -355,7 +355,7 @@ function navigateTo(page, updateParam = false) {
 	if (page.name == "projects") {
 		setTimeout(() => {
 			showProjectsContent();
-		}, TRANSITION_TIME);
+		}, TRANSITION_TIME * 0.8);
 	} else {
 		setTimeout(() => {
 			hideProjectsContent();
