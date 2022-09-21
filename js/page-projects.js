@@ -1,10 +1,10 @@
-let projectsCount = 2;
+let projectsCount = 3;
 let currentProject = 0;
 
 $(".arrow-prev").click(() => {
 	if (currentProject > 0) {
 		currentProject--;
-		$(".projects-container").css("left", `${100 * currentProject}%`);
+		$(".projects-container").css("left", `-${100 * currentProject}%`);
 		if (currentProject <= 0) {
 			$(".arrow-prev").addClass("disabled");
 		}
