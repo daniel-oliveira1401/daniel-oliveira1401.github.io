@@ -32,6 +32,7 @@ $(window).on("load", () => {
 		applyContentSizes();
 	});
 	hideProjectsContent();
+	initWarningOverlay();
 	$(".loading-overlay").fadeOut();
 });
 
@@ -394,5 +395,19 @@ function collapseAllContents(exception) {
 		if (page.name != exception) {
 			page.collapse();
 		}
+	});
+}
+
+function initWarningOverlay() {
+	let warningOverlay = document.querySelector(".warning-overlay");
+	let btnContinueHere = document.querySelector(".warning-overlay .btn-ok");
+
+	let btnDismiss = document.querySelector(".warning-overlay .dismiss");
+
+	btnContinueHere.addEventListener("click", () => {
+		warningOverlay.classList.add("hide");
+	});
+	btnDismiss.addEventListener("click", () => {
+		warningOverlay.classList.add("hide");
 	});
 }

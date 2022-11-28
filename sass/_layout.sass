@@ -204,6 +204,77 @@
 	&.active
 		opacity: 0.5
 
+.warning-overlay
+	position: fixed
+	top: 0
+	left: 0
+	height: 100vh
+	width: 100%
+	background-color: rgba(1, 1, 1, 0.75)
+	z-index: 30
+	display: grid
+	place-items: center
+	&.hide
+			display: none
+	.warning
+		width: clamp(300px, 100%, 700px)
+		background-color: $eerieBlack
+		border: 1px solid $celadonBlue
+		padding: 1rem
+		
+
+		&__header
+			position: relative
+
+			.title
+				font-size: 24px
+				font-weight: 400
+				margin-bottom: 2rem
+
+			.dismiss
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 0
+				height: 30px
+				width: 30px
+				display: grid
+				place-items: center
+		&__body
+			font-size: 18px
+			line-height: 160%
+			margin-bottom: 2rem
+			p
+				margin-bottom: 1rem
+		&__footer
+			display: flex
+			justify-content: center
+
+			.btn-new-portfolio
+				cursor: pointer
+				user-select: none
+				text-transform: capitalize
+				padding: 1rem
+				font-size: 20px
+				//bg of the new portfolio
+				background-color: #1f222e
+				//text color of the new portfolio 
+				color: #dde2ef
+				//accent of the new portfolio
+				border-left: 4px solid #0e3fef
+				border-bottom: 4px solid #0e3fef
+				margin-right: 2rem
+			.btn-ok
+				cursor: pointer
+				user-select: none
+				padding: 1rem
+				text-transform: capitalize
+				background-color: $white
+				color: $eerieBlack
+				display: flex
+				align-items: center
+				justify-content: center
+
 .nav
 	position: fixed
 	top: 0
@@ -282,8 +353,9 @@
 		.symbols
 			color: $celadonBlue
 			text-shadow: $tag-shadow !important
-			display: inline-block
+			display: none
 			margin-inline: 5px
+
 
 		&:hover, &:active
 			color: $white
@@ -298,6 +370,23 @@
 			background-repeat: no-repeat
 			position: relative
 			transform: translateY(3px)
+
+		&.new-portfolio
+			cursor: pointer
+			user-select: none
+			text-transform: capitalize
+			padding: 1rem
+			font-size: 20px
+			//bg of the new portfolio
+			background-color: #1f222e
+			//text color of the new portfolio 
+			color: #dde2ef
+			//accent of the new portfolio
+			border-left: 4px solid #0e3fef
+			border-bottom: 4px solid #0e3fef
+			width: fit-content
+			margin-inline: auto
+			margin-top: 1rem
 
 	&__hamburguer
 		transition: all calc( $nav-transition * 1.2 ) ease-in-out
